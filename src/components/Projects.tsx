@@ -14,7 +14,7 @@ export function Projects() {
     {
       title: 'Runicorn',
       status: 'Live',
-      link: 'https://rnltlabs.de/runicorn/',
+      link: 'https://runicorn.io/',
       summary:
         'A GPS art drawing tool for runners and cyclists. Draw creative routes, export GPX files, and share your runs on fitness platforms. Built with React, TypeScript, and Leaflet.',
       highlights: [
