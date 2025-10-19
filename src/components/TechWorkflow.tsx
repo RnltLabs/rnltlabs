@@ -72,7 +72,7 @@ export function TechWorkflow() {
     <section id="process" className="bg-background py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">
-          Tech Stack & Workflow
+          Workflow
         </h2>
         <p className="mb-8 text-lg text-muted-foreground">
           Modern development setup optimized for speed, reliability, and solo productivity.
