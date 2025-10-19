@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Workflow documentation (personal use only)
+WORKFLOW-CHEATSHEET.md
