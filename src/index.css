@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* RNLT Labs Color Scheme - converted from original HTML */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 222 47% 11%; /* #0f1116 */
+
+    --card: 0 0% 100%; /* #ffffff */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 60%; /* #3b82f6 - accent-blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 98%; /* #f8fafc - bg-secondary */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%; /* #475569 */
+
+    --accent: 142 71% 45%; /* #22c55e - accent-green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0% / 0.08; /* rgba(0,0,0,0.08) */
+    --input: 0 0% 0% / 0.08;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+}
