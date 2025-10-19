@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2025 Roman Reinelt / RNLT Labs
+ *
+ * This software is proprietary and confidential.
+ * Unauthorized use, reproduction, or distribution is prohibited.
+ * For licensing information, contact: hello@rnltlabs.de
+ */
+
 export function NeuralNetworkBackground() {
   return (
     <div className="absolute inset-0 -top-[10%] -left-[10%] -right-[10%] -bottom-[10%] opacity-20 animate-networkFloat pointer-events-none">
