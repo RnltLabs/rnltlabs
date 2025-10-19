@@ -21,9 +21,6 @@ export function HomePage() {
 
       <footer className="relative z-[105] bg-foreground py-6 text-white">
         <div className="container mx-auto text-center">
-          <p className="mb-2 text-xl font-medium opacity-95">
-            Kinda interested in this stuff? Hit me up 🚀
-          </p>
           <p className="mb-3 text-lg opacity-90">We test in production so you don't have to.</p>
           <a
             href="/imprint"
