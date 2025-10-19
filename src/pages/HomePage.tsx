@@ -13,8 +13,8 @@ export function HomePage() {
       <div className="pt-[60px]">
         <Hero />
       <LabStrategy />
-      <TechWorkflow />
       <Projects />
+      <TechWorkflow />
       <Founder />
       <Contact />
       </div>
