@@ -30,3 +30,10 @@ WORKFLOW-CHEATSHEET.md
 *.njsproj
 *.sln
 *.sw?
+
+# Private configs (linked via symlinks)
+.rnlt
+.claude
+
+# EXCEPTION: Tech stack is public
+!.rnlt/project-config.yml
