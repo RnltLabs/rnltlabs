@@ -16,7 +16,7 @@ export function TechWorkflow() {
         'Claude Code as primary development interface',
         'AI-powered code generation & refactoring',
         'Modular subagent architecture',
-        'React/TypeScript + Vite for all projects',
+        'React/TypeScript',
       ],
     },
     {
