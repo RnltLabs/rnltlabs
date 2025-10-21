@@ -27,6 +27,9 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/rnltlabs:staging
+        build-args: |
+          GIT_COMMIT=${{ github.sha }}
+        cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/rnltlabs:staging
         cache-to: type=inline
 
     - name: Deploy to Staging Server
