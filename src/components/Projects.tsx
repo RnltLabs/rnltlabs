@@ -38,49 +38,49 @@ export function Projects() {
         },
         {
           label: 'Tech Stack',
-          text: 'React/TypeScript, Vite, Leaflet, shadcn/ui, Tailwind CSS · CI/CD with GitHub Actions',
+          text: 'React/TypeScript, Vite, Leaflet, shadcn/ui, Tailwind CSS',
         },
       ],
     },
     {
-      title: 'Aggregation Platform',
+      title: 'Massava',
       status: 'Early Stage MVP',
       link: 'https://staging.rnltlabs.de/massava/',
       githubUrl: 'https://github.com/RnltLabs/massava',
       summary:
-        'A SaaS platform designed to unify fragmented booking workflows, reducing administrative load for providers and improving discovery for end users.',
+        'A booking platform for service providers. Streamlines appointment scheduling and reduces administrative overhead.',
       highlights: [
         {
           label: 'Problem',
-          text: 'Disconnected booking tools slow operations and limit client acquisition',
+          text: 'Manual booking management is time-consuming and error-prone for service providers',
         },
         {
-          label: 'Approach',
-          text: 'React/TypeScript, NestJS, modular subagents for onboarding, scheduling, notifications',
+          label: 'Solution',
+          text: 'Centralized platform for scheduling, notifications, and provider management',
         },
         {
-          label: 'Targets',
-          text: 'MVP by end of year · 10k+ bookings/day design · Weekly deploys',
+          label: 'Tech Stack',
+          text: 'React/TypeScript, NestJS, PostgreSQL · MVP by end of year · 10k+ bookings/day architecture',
         },
       ],
     },
     {
       title: 'Product Development Copilot',
-      status: 'In Development',
+      status: 'Planning',
       summary:
-        'A platform concept aimed at supporting structured product lifecycles (PDLC), helping transform high-level ideas into actionable outcomes. Currently intended for personal use only.',
+        'A tool for structured product development. Helps transform high-level ideas into actionable steps. Currently in planning phase for personal use.',
       highlights: [
         {
           label: 'Problem',
-          text: 'Turning abstract product visions into structured, manageable steps is often slow and fragmented',
+          text: 'Turning abstract product visions into structured execution plans is slow and fragmented',
         },
         {
-          label: 'Approach',
-          text: 'React/TypeScript, NestJS, modular agents for guidance, planning, and execution support',
+          label: 'Solution',
+          text: 'AI-powered guidance for product ideation, planning, and execution tracking',
         },
         {
-          label: 'Targets',
-          text: 'Early prototype for personal workflows · Scalable foundation for potential expansion',
+          label: 'Tech Stack',
+          text: 'React/TypeScript, NestJS, modular AI agents · Early prototype phase',
         },
       ],
     },
