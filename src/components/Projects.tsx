@@ -42,7 +42,8 @@ export function Projects() {
     },
     {
       title: 'Aggregation Platform',
-      status: 'In Development',
+      status: 'Early Stage MVP',
+      link: 'https://staging.rnltlabs.de/massava/',
       summary:
         'A SaaS platform designed to unify fragmented booking workflows, reducing administrative load for providers and improving discovery for end users.',
       highlights: [
