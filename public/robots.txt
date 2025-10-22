@@ -1,0 +1,11 @@
+# robots.txt for rnltlabs.de
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://rnltlabs.de/sitemap.xml
+
+# Block common bot traps
+Disallow: /api/
+Disallow: /*.json$
