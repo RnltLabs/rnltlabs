@@ -38,7 +38,7 @@ export function TechWorkflow() {
         'Git branching: main (prod) + develop (staging)',
         'Feature branches: rnlt-<issue>-<description>',
         'Semantic versioning with automated tagging',
-        'Clean commit history (no AI attribution)',
+        'Clean commit history with descriptive messages',
       ],
     },
     {
