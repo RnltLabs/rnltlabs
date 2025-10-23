@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNLT Labs - OG Image Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #e5e5e5;
+            padding: 40px;
+        }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: #ffffff; /* --background: white from website */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Neural Network Background - 1:1 from NeuralNetworkBackground.tsx */
+        .neural-network {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            right: -10%;
+            bottom: -10%;
+            opacity: 0.3; /* Increased from 0.2 for more visual presence */
+            pointer-events: none;
+            animation: networkFloat 40s ease-in-out infinite;
+        }
+
+        @keyframes networkFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-30px, -20px) rotate(0.5deg); }
+            50% { transform: translate(20px, -30px) rotate(-0.5deg); }
+            75% { transform: translate(-20px, 20px) rotate(0.3deg); }
+        }
+
+        /* Gradient Overlay - 1:1 from Hero.tsx */
+        .gradient-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.02), transparent, rgba(34, 197, 94, 0.02));
+            pointer-events: none;
+        }
+
+        /* Content Container */
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 60px;
+        }
+
+        /* Main Heading - 1:1 from Hero.tsx h1 */
+        .main-heading {
+            width: 100%;
+            font-size: clamp(4rem, 8vw, 5.8rem); /* Slightly higher */
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            text-align: center;
+            margin-bottom: 0;
+            /* Exact gradient from Hero.tsx: from-foreground to-primary */
+            background: linear-gradient(to bottom right, #0f1116, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Footer Info */
+        .footer-info {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 1.2375rem; /* +10% from 1.125rem */
+            font-weight: 400; /* Lighter weight */
+            color: #475569; /* Medium gray - subtle */
+        }
+
+        .footer-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Brand Label Container */
+        .brand-label {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 50px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* Tight spacing for visual grouping */
+        }
+
+        /* Brand Name - Larger, bold */
+        .brand-name-label {
+            font-size: 2.2rem; /* +10% from 2rem */
+            font-weight: 500; /* Lighter - reduced from 600 */
+            color: #0f1116; /* Dark, professional */
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        /* Subtitle - Smaller, lighter */
+        .brand-subtitle-label {
+            font-size: 1.2375rem; /* +10% from 1.125rem */
+            font-weight: 400; /* Lighter - reduced from 500 */
+            color: #475569; /* Medium gray for hierarchy */
+            letter-spacing: -0.005em;
+            line-height: 1;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .instructions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <!-- Neural Network Background - 1:1 copy from NeuralNetworkBackground.tsx -->
+        <div class="neural-network">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%;">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="1" />
+                    </filter>
+                </defs>
+                <g>
+                    <!-- Irregular distributed nodes -->
+                    <circle cx="87" cy="134" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="234" cy="78" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="156" cy="267" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="342" cy="189" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="423" cy="298" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="278" cy="376" r="4" fill="#22c55e" opacity="0.9" />
+                    <circle cx="512" cy="143" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="389" cy="456" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="634" cy="234" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="567" cy="389" r="5" fill="#22c55e" opacity="1" filter="url(#glow)" />
+                    <circle cx="723" cy="156" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="456" cy="567" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="812" cy="278" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="678" cy="498" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="934" cy="367" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="789" cy="423" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="1045" cy="234" r="4" fill="#22c55e" opacity="0.9" />
+                    <circle cx="867" cy="567" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="1123" cy="445" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="978" cy="678" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="1234" cy="345" r="5" fill="#22c55e" opacity="1" filter="url(#glow)" />
+                    <circle cx="1089" cy="589" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="1345" cy="234" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="1178" cy="723" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="1423" cy="456" r="4" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="1289" cy="812" r="3" fill="#22c55e" opacity="0.8" />
+                    <circle cx="1512" cy="567" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="145" cy="423" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="267" cy="534" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="89" cy="678" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="378" cy="623" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="234" cy="789" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="489" cy="712" r="4" fill="#22c55e" opacity="0.9" />
+                    <circle cx="345" cy="867" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="598" cy="823" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="456" cy="923" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="712" cy="634" r="5" fill="#22c55e" opacity="1" filter="url(#glow)" />
+                    <circle cx="567" cy="745" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="823" cy="712" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="678" cy="856" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="934" cy="789" r="4" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="789" cy="912" r="3" fill="#22c55e" opacity="0.8" />
+                    <circle cx="1045" cy="823" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="1156" cy="167" r="3" fill="#cbd5e0" opacity="0.7" />
+                    <circle cx="1267" cy="578" r="4" fill="#3b82f6" opacity="0.9" />
+                    <circle cx="1378" cy="689" r="3" fill="#cbd5e0" opacity="0.8" />
+                    <circle cx="1489" cy="790" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="701" cy="345" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="823" cy="456" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="989" cy="567" r="5" fill="#3b82f6" opacity="1" filter="url(#glow)" />
+                    <circle cx="567" cy="567" r="5" fill="#22c55e" opacity="1" filter="url(#glow)" />
+
+                    <!-- Complex irregular connections -->
+                    <line x1="87" y1="134" x2="234" y2="78" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="234" y1="78" x2="342" y2="189" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="156" y1="267" x2="278" y2="376" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="342" y1="189" x2="423" y2="298" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="278" y1="376" x2="389" y2="456" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="512" y1="143" x2="634" y2="234" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="389" y1="456" x2="567" y2="389" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="567" y1="389" x2="678" y2="498" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="723" y1="156" x2="812" y2="278" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="678" y1="498" x2="789" y2="423" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="812" y1="278" x2="934" y2="367" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="934" y1="367" x2="1045" y2="234" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="867" y1="567" x2="978" y2="678" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="1045" y1="234" x2="1123" y2="445" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="1123" y1="445" x2="1234" y2="345" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="1089" y1="589" x2="1178" y2="723" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="1234" y1="345" x2="1345" y2="234" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="1345" y1="234" x2="1423" y2="456" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="1289" y1="812" x2="1512" y2="567" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="145" y1="423" x2="267" y2="534" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="267" y1="534" x2="378" y2="623" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="378" y1="623" x2="489" y2="712" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="489" y1="712" x2="598" y2="823" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="598" y1="823" x2="712" y2="634" stroke="#22c55e" stroke-width="1.5" opacity="0.5" />
+                    <line x1="712" y1="634" x2="823" y2="712" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="823" y1="712" x2="934" y2="789" stroke="#cbd5e0" stroke-width="1" opacity="0.4" />
+                    <line x1="934" y1="789" x2="1045" y2="823" stroke="#3b82f6" stroke-width="1.5" opacity="0.5" />
+                    <line x1="342" y1="189" x2="567" y2="389" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="567" y1="389" x2="934" y2="367" stroke="#22c55e" stroke-width="1" opacity="0.3" />
+                    <line x1="278" y1="376" x2="678" y2="498" stroke="#cbd5e0" stroke-width="1" opacity="0.3" />
+                    <line x1="456" y1="567" x2="867" y2="567" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="378" y1="623" x2="712" y2="634" stroke="#22c55e" stroke-width="1" opacity="0.3" />
+                    <line x1="234" y1="78" x2="512" y2="143" stroke="#cbd5e0" stroke-width="1" opacity="0.3" />
+                    <line x1="634" y1="234" x2="1045" y2="234" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="789" y1="423" x2="1123" y2="445" stroke="#22c55e" stroke-width="1" opacity="0.3" />
+                    <line x1="701" y1="345" x2="823" y2="456" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="823" y1="456" x2="989" y2="567" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="989" y1="567" x2="1123" y2="678" stroke="#3b82f6" stroke-width="1" opacity="0.3" />
+                    <line x1="87" y1="134" x2="342" y2="189" stroke="#3b82f6" stroke-width="0.8" opacity="0.25" />
+                    <line x1="156" y1="267" x2="567" y2="389" stroke="#cbd5e0" stroke-width="0.8" opacity="0.25" />
+                    <line x1="423" y1="298" x2="934" y2="367" stroke="#22c55e" stroke-width="0.8" opacity="0.25" />
+                    <line x1="512" y1="143" x2="1045" y2="234" stroke="#3b82f6" stroke-width="0.8" opacity="0.25" />
+                    <line x1="389" y1="456" x2="978" y2="678" stroke="#cbd5e0" stroke-width="0.8" opacity="0.25" />
+                    <line x1="723" y1="156" x2="1234" y2="345" stroke="#22c55e" stroke-width="0.8" opacity="0.25" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Gradient Overlay - 1:1 from Hero.tsx -->
+        <div class="gradient-overlay"></div>
+
+        <!-- Content - 1:1 from Hero.tsx -->
+        <div class="content">
+            <!-- Main Heading - exact copy from Hero.tsx h1 -->
+            <h1 class="main-heading">
+                New tech hits<br>different<br>when you ship it.
+            </h1>
+        </div>
+    </div>
+</body>
+</html>
