@@ -15,6 +15,30 @@ export const AutomationWorkflow: React.FC = () => {
         How GitHub, Linear, Hetzner, and MCP servers work together to create a fully automated development workflow
       </p>
 
+      {/* Technology Stack Overview */}
+      <div className="mb-6 grid gap-4 md:grid-cols-4">
+        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
+          <div className="mb-2 text-3xl">📋</div>
+          <div className="font-semibold">Linear</div>
+          <div className="text-xs text-muted-foreground">Issue Tracking</div>
+        </div>
+        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
+          <div className="mb-2 text-3xl">🐙</div>
+          <div className="font-semibold">GitHub</div>
+          <div className="text-xs text-muted-foreground">Version Control</div>
+        </div>
+        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
+          <div className="mb-2 text-3xl">🚀</div>
+          <div className="font-semibold">Hetzner</div>
+          <div className="text-xs text-muted-foreground">Hosting & Deploy</div>
+        </div>
+        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
+          <div className="mb-2 text-3xl">🔌</div>
+          <div className="font-semibold">MCP</div>
+          <div className="text-xs text-muted-foreground">AI Integration</div>
+        </div>
+      </div>
+
       {/* Main Workflow Diagram */}
       <div className="rounded-lg border bg-card p-8 shadow-md">
         {/* Workflow Steps */}
@@ -195,54 +219,6 @@ export const AutomationWorkflow: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Integration Summary */}
-        <div className="mt-8 rounded-lg border-2 border-primary/20 bg-primary/5 p-6">
-          <h4 className="mb-4 flex items-center gap-2 text-lg font-semibold">
-            <span className="text-2xl">🔄</span>
-            Continuous Sync & Feedback
-          </h4>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div>
-              <h5 className="mb-2 font-semibold text-sm">Automated Status Updates</h5>
-              <p className="text-sm text-muted-foreground">
-                Linear issues automatically sync with GitHub branches and PRs.
-                When a PR is merged, Linear status updates to "Done" and deployment metrics are tracked.
-              </p>
-            </div>
-            <div>
-              <h5 className="mb-2 font-semibold text-sm">Seamless Context Flow</h5>
-              <p className="text-sm text-muted-foreground">
-                MCP servers provide AI agents with real-time access to GitHub repos, Linear issues,
-                and database schemas, ensuring decisions are based on current state.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Technology Stack Overview */}
-      <div className="mt-6 grid gap-4 md:grid-cols-4">
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">📋</div>
-          <div className="font-semibold">Linear</div>
-          <div className="text-xs text-muted-foreground">Issue Tracking</div>
-        </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🐙</div>
-          <div className="font-semibold">GitHub</div>
-          <div className="text-xs text-muted-foreground">Version Control</div>
-        </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🚀</div>
-          <div className="font-semibold">Hetzner</div>
-          <div className="text-xs text-muted-foreground">Hosting & Deploy</div>
-        </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🔌</div>
-          <div className="font-semibold">MCP</div>
-          <div className="text-xs text-muted-foreground">AI Integration</div>
         </div>
       </div>
     </div>
