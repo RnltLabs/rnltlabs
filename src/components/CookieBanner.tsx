@@ -83,24 +83,24 @@ export function CookieBanner() {
     <div
       className="fixed bottom-0 left-0 right-0 z-[200] border-t bg-card shadow-lg"
       role="dialog"
-      aria-label="Cookie Einstellungen"
+      aria-label="Cookie Settings"
     >
       <div className="container mx-auto max-w-[1200px] px-6 py-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* Information text */}
           <div className="flex-1">
             <h3 className="mb-2 text-lg font-semibold text-foreground">
-              Cookie-Einstellungen
+              Cookie Settings
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Wir verwenden Cookies, um die Nutzung unserer Website zu analysieren und zu verbessern.
-              Analytics-Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren.
-              Weitere Informationen finden Sie in unserer{' '}
+              We use cookies to analyze and improve the usage of our website.
+              Analytics cookies help us understand how visitors interact with our website.
+              For more information, please see our{' '}
               <Link
                 to="/imprint#datenschutz"
                 className="font-medium text-primary underline-offset-4 hover:underline"
               >
-                Datenschutzerklärung
+                Privacy Policy
               </Link>
               .
             </p>
@@ -113,14 +113,14 @@ export function CookieBanner() {
               className="rounded-lg border bg-secondary px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               type="button"
             >
-              Nur Essenziell
+              Essential Only
             </button>
             <button
               onClick={handleAcceptAll}
               className="rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               type="button"
             >
-              Alle akzeptieren
+              Accept All
             </button>
           </div>
         </div>

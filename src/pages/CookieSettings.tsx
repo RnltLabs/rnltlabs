@@ -72,7 +72,7 @@ export function CookieSettings() {
     }
 
     // Show success message
-    setSaveMessage('Ihre Einstellungen wurden gespeichert.')
+    setSaveMessage('Your settings have been saved.')
     setTimeout(() => setSaveMessage(''), 3000)
 
     // Trigger storage event for other tabs/windows
@@ -87,7 +87,7 @@ export function CookieSettings() {
       <section className="bg-background py-12 pt-20">
         <div className="container mx-auto max-w-[1200px] px-8">
           <h1 className="mb-6 text-[2rem] font-semibold text-foreground">
-            Cookie-Einstellungen
+            Cookie Settings
           </h1>
 
           {/* Introduction */}
@@ -95,13 +95,13 @@ export function CookieSettings() {
             <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Auf dieser Seite können Sie Ihre Cookie-Einstellungen verwalten. Wir respektieren
-              Ihre Privatsphäre und geben Ihnen die vollständige Kontrolle darüber, welche Cookies
-              Sie akzeptieren möchten.
+              On this page you can manage your cookie settings. We respect
+              your privacy and give you full control over which cookies
+              you want to accept.
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              Bitte beachten Sie: Diese Website erfordert keine Benutzerkonten und speichert keine
-              personenbezogenen Daten außer den hier beschriebenen Cookies.
+              Please note: This website does not require user accounts and does not store any
+              personal data other than the cookies described here.
             </p>
           </div>
 
@@ -111,8 +111,8 @@ export function CookieSettings() {
 
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-xl font-semibold text-foreground">Essenziell</h2>
-                <p className="mt-1 text-sm text-muted-foreground">Immer aktiv</p>
+                <h2 className="text-xl font-semibold text-foreground">Essential</h2>
+                <p className="mt-1 text-sm text-muted-foreground">Always active</p>
               </div>
               <div className="relative inline-flex items-center">
                 <input
@@ -120,22 +120,22 @@ export function CookieSettings() {
                   checked={true}
                   disabled={true}
                   className="h-5 w-5 cursor-not-allowed rounded border-border bg-secondary"
-                  aria-label="Essenzielle Cookies"
+                  aria-label="Essential Cookies"
                 />
               </div>
             </div>
 
             <p className="mb-3 leading-relaxed text-muted-foreground">
-              Essenzielle Cookies sind für die Grundfunktionen der Website erforderlich und können
-              nicht deaktiviert werden.
+              Essential cookies are required for basic website functionality and cannot
+              be disabled.
             </p>
 
             <div className="rounded-lg bg-secondary p-4">
-              <h3 className="mb-2 font-medium text-foreground">Verwendete Cookies:</h3>
+              <h3 className="mb-2 font-medium text-foreground">Cookies used:</h3>
               <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
                 <li>
                   <strong className="font-medium text-foreground">cookie-consent</strong>:
-                  Speichert Ihre Cookie-Einwilligung (12 Monate)
+                  Stores your cookie consent (12 months)
                 </li>
               </ul>
             </div>
@@ -162,17 +162,17 @@ export function CookieSettings() {
             </div>
 
             <p className="mb-3 leading-relaxed text-muted-foreground">
-              Analytics-Cookies helfen uns zu verstehen, wie Besucher mit unserer Website
-              interagieren. Alle Daten werden anonymisiert erfasst.
+              Analytics cookies help us understand how visitors interact with our website.
+              All data is collected anonymously.
             </p>
 
             <div className="mb-4 rounded-lg bg-secondary p-4">
               <h3 className="mb-2 font-medium text-foreground">Umami Analytics:</h3>
               <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                <li>Anonymisierte IP-Adresse (gekürzt)</li>
-                <li>Browser-Typ und Betriebssystem</li>
-                <li>Besuchte Seiten und Verweildauer</li>
-                <li>Referrer (woher Sie kamen)</li>
+                <li>Anonymized IP address (truncated)</li>
+                <li>Browser type and operating system</li>
+                <li>Pages visited and time spent</li>
+                <li>Referrer (where you came from)</li>
               </ul>
             </div>
 
@@ -191,13 +191,13 @@ export function CookieSettings() {
                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                   />
                 </svg>
-                Datenschutzfreundlich
+                Privacy-friendly
               </h3>
               <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                <li>Selbst gehostet auf deutschen Servern (Hetzner)</li>
-                <li>Keine Cookies von Drittanbietern</li>
-                <li>Keine personenbezogenen Daten</li>
-                <li>DSGVO-konform</li>
+                <li>Self-hosted on German servers (Hetzner)</li>
+                <li>No third-party cookies</li>
+                <li>No personal data collected</li>
+                <li>GDPR compliant</li>
               </ul>
             </div>
           </div>
@@ -209,7 +209,7 @@ export function CookieSettings() {
               className="rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               type="button"
             >
-              Einstellungen speichern
+              Save Settings
             </button>
 
             {saveMessage && (
@@ -222,23 +222,23 @@ export function CookieSettings() {
           {/* Additional Information */}
           <div className="mt-8 rounded-2xl border bg-secondary p-8">
             <h2 className="mb-4 text-lg font-semibold text-foreground">
-              Weitere Informationen
+              Additional Information
             </h2>
 
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>
-                <strong className="font-medium text-foreground">Speicherdauer:</strong> Cookie-Einstellungen
-                werden 12 Monate in Ihrem Browser gespeichert.
+                <strong className="font-medium text-foreground">Storage duration:</strong> Cookie settings
+                are stored for 12 months in your browser.
               </p>
 
               <p>
-                <strong className="font-medium text-foreground">Widerruf:</strong> Sie können Ihre
-                Einwilligung jederzeit auf dieser Seite ändern oder widerrufen.
+                <strong className="font-medium text-foreground">Revocation:</strong> You can change or
+                revoke your consent at any time on this page.
               </p>
 
               <p>
-                <strong className="font-medium text-foreground">Kontakt:</strong> Für Anfragen zu
-                Ihren Daten kontaktieren Sie uns unter:{' '}
+                <strong className="font-medium text-foreground">Contact:</strong> For inquiries about
+                your data, contact us at:{' '}
                 <a
                   href="mailto:hello@rnltlabs.de"
                   className="font-medium text-primary underline-offset-4 hover:underline"
@@ -248,12 +248,12 @@ export function CookieSettings() {
               </p>
 
               <p>
-                Weitere Details finden Sie in unserer{' '}
+                For more details, see our{' '}
                 <a
                   href="/imprint#datenschutz"
                   className="font-medium text-primary underline-offset-4 hover:underline"
                 >
-                  Datenschutzerklärung
+                  Privacy Policy
                 </a>
                 .
               </p>
