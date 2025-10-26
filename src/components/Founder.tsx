@@ -26,11 +26,20 @@ export function Founder() {
               {/* Left: Avatar + Name */}
               <div className="flex shrink-0 flex-col items-center">
                 <div className="mb-4 shrink-0">
-                  <img
-                    src="/images/founder-roman-reinelt.jpg"
-                    alt="Roman Reinelt"
-                    className="h-[150px] w-[150px] rounded-full border-[3px] border-secondary object-cover shadow-md"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet="/images/founder-roman-reinelt-150.webp 1x, /images/founder-roman-reinelt-300.webp 2x"
+                    />
+                    <img
+                      src="/images/founder-roman-reinelt.jpg"
+                      alt="Roman Reinelt, Founder of RNLT Labs"
+                      width="150"
+                      height="150"
+                      loading="lazy"
+                      className="h-[150px] w-[150px] rounded-full border-[3px] border-secondary object-cover shadow-md"
+                    />
+                  </picture>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-2 text-2xl font-semibold text-foreground">Roman Reinelt</div>
