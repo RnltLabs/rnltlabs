@@ -70,27 +70,35 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Planning & Issue Creation</h4>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">📋</span>
-                      <span className="font-semibold">Linear</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">📋</span>
+                        <span className="font-semibold">Linear</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Create issue with requirements</li>
+                        <li>• Auto-assign to project/initiative</li>
+                        <li>• Track status through workflow states</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Create issue with requirements</li>
-                      <li>• Auto-assign to project/initiative</li>
-                      <li>• Track status through workflow states</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🤖</span>
-                      <span className="font-semibold">AI Agent</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🤖</span>
+                        <span className="font-semibold">AI Agent</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Analyze requirements via Linear MCP</li>
+                        <li>• Break down into subtasks</li>
+                        <li>• Estimate complexity</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Analyze requirements via Linear MCP</li>
-                      <li>• Break down into subtasks</li>
-                      <li>• Estimate complexity</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -109,38 +117,50 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Development & Code Generation</h4>
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🐙</span>
-                      <span className="font-semibold">GitHub</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🐙</span>
+                        <span className="font-semibold">GitHub</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Create feature branch</li>
+                        <li>• Auto-link to Linear issue</li>
+                        <li>• Track commits</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Create feature branch</li>
-                      <li>• Auto-link to Linear issue</li>
-                      <li>• Track commits</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🔌</span>
-                      <span className="font-semibold">MCP Servers</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🔌</span>
+                        <span className="font-semibold">MCP Servers</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Sequential reasoning</li>
+                        <li>• GitHub API access</li>
+                        <li>• Database operations</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Sequential reasoning</li>
-                      <li>• GitHub API access</li>
-                      <li>• Database operations</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">⚙️</span>
-                      <span className="font-semibold">AI Agents</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">⚙️</span>
+                        <span className="font-semibold">AI Agents</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Generate code</li>
+                        <li>• Write tests (98% coverage)</li>
+                        <li>• Create documentation</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Generate code</li>
-                      <li>• Write tests (98% coverage)</li>
-                      <li>• Create documentation</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -159,27 +179,35 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Review & Quality Checks</h4>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🪝</span>
-                      <span className="font-semibold">Git Hooks</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🪝</span>
+                        <span className="font-semibold">Git Hooks</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Pre-commit: Lint + Type check</li>
+                        <li>• Pre-push: Tests + Security scan</li>
+                        <li>• Post-merge: Update dependencies</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Pre-commit: Lint + Type check</li>
-                      <li>• Pre-push: Tests + Security scan</li>
-                      <li>• Post-merge: Update dependencies</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">👁️</span>
-                      <span className="font-semibold">AI Review</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">👁️</span>
+                        <span className="font-semibold">AI Review</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Code quality analysis</li>
+                        <li>• Security vulnerability scan</li>
+                        <li>• Performance optimization</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Code quality analysis</li>
-                      <li>• Security vulnerability scan</li>
-                      <li>• Performance optimization</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -198,38 +226,50 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Deployment & Monitoring</h4>
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🐙</span>
-                      <span className="font-semibold">GitHub PR</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🐙</span>
+                        <span className="font-semibold">GitHub PR</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Create pull request</li>
+                        <li>• Auto-link Linear issue</li>
+                        <li>• Run CI/CD pipeline</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Create pull request</li>
-                      <li>• Auto-link Linear issue</li>
-                      <li>• Run CI/CD pipeline</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">🚀</span>
-                      <span className="font-semibold">Hetzner</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🚀</span>
+                        <span className="font-semibold">Hetzner</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Auto-deploy to staging</li>
+                        <li>• Run smoke tests</li>
+                        <li>• Promote to production</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Auto-deploy to staging</li>
-                      <li>• Run smoke tests</li>
-                      <li>• Promote to production</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
-                  <div className="rounded-lg border bg-muted/30 p-4">
-                    <div className="mb-2 flex items-center gap-2">
-                      <span className="text-2xl">📋</span>
-                      <span className="font-semibold">Linear</span>
+                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                    <div className="relative z-10">
+                      <div className="mb-2 flex items-center gap-2">
+                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">📋</span>
+                        <span className="font-semibold">Linear</span>
+                      </div>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Auto-update issue status</li>
+                        <li>• Mark as completed</li>
+                        <li>• Track deployment metrics</li>
+                      </ul>
                     </div>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Auto-update issue status</li>
-                      <li>• Mark as completed</li>
-                      <li>• Track deployment metrics</li>
-                    </ul>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   </div>
                 </div>
               </div>
