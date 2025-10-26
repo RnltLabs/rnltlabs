@@ -45,9 +45,6 @@ export function LabStrategy() {
 
         {/* Main Card */}
         <div className="group relative mt-8 overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
-          {/* Background gradient fade */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
-
           {/* Decorative gradient circle */}
           <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
