@@ -77,17 +77,14 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
           // Color scheme based on efficiency
           let accentColor = 'text-yellow-500';
           let bgColor = 'bg-yellow-500/10';
-          let borderColor = 'border-yellow-500/30';
 
           if (version.efficiency < 40) {
             accentColor = 'text-red-500';
             bgColor = 'bg-red-500/10';
-            borderColor = 'border-red-500/30';
           }
           if (version.efficiency > 70) {
             accentColor = 'text-green-500';
             bgColor = 'bg-green-500/10';
-            borderColor = 'border-green-500/30';
           }
 
           const versionNumber = version.id === 'v0' ? '0.1' : version.id === 'v1' ? '1.0' : '2.0';
