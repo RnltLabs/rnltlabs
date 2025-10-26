@@ -28,7 +28,7 @@ export function Contact() {
   ]
 
   return (
-    <section id="contact" className="bg-secondary py-16 text-center">
+    <section id="contact" className="bg-background py-20 text-center">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Contact</h2>
         <p className="mb-8 text-xl font-medium text-foreground">

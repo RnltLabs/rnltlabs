@@ -87,7 +87,7 @@ export function Projects() {
   ]
 
   return (
-    <section id="projects" className="bg-secondary py-20">
+    <section id="projects" className="bg-background py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Projects</h2>
 

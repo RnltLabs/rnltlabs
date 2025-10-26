@@ -9,8 +9,9 @@
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 import { LabStrategy } from '../components/LabStrategy'
-import { TechWorkflow } from '../components/TechWorkflow'
 import { Projects } from '../components/Projects'
+import { TechStack } from '../components/TechStack'
+import { WorkflowEvolution } from '../components/WorkflowEvolution/'
 import { Founder } from '../components/Founder'
 import { Contact } from '../components/Contact'
 
@@ -20,11 +21,12 @@ export function HomePage() {
       <Header />
       <div className="pt-[60px]">
         <Hero />
-      <LabStrategy />
-      <Projects />
-      <TechWorkflow />
-      <Founder />
-      <Contact />
+        <LabStrategy />
+        <Projects />
+        <TechStack />
+        <WorkflowEvolution />
+        <Founder />
+        <Contact />
       </div>
 
       <footer className="relative z-[105] bg-foreground py-6 text-white">
