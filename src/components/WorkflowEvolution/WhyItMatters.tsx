@@ -130,35 +130,53 @@ export const WhyItMatters: React.FC = () => {
       <div className="mt-8 rounded-lg border bg-muted/30 p-6">
         <h4 className="mb-4 text-xl font-semibold">Who Benefits From This?</h4>
         <div className="grid gap-6 md:grid-cols-3">
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-2xl">👨‍💻</span>
-              <span className="font-semibold">Solo Developers</span>
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+            {/* Gradient top border (shows on hover) */}
+            <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/benefit:scale-x-100" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />
+            <div className="relative z-10">
+              <div className="mb-2 flex items-center gap-2">
+                <span className="text-2xl transition-transform duration-300 group-hover/benefit:scale-110">👨‍💻</span>
+                <span className="font-semibold">Solo Developers</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Build production-grade apps alone. Compete with teams of 5-10 developers
+                by leveraging AI to handle testing, security, and deployment.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Build production-grade apps alone. Compete with teams of 5-10 developers
-              by leveraging AI to handle testing, security, and deployment.
-            </p>
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/benefit:translate-x-full" />
           </div>
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-2xl">🚀</span>
-              <span className="font-semibold">Small Teams</span>
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+            {/* Gradient top border (shows on hover) */}
+            <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-transform group-hover/benefit:scale-x-100" />
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />
+            <div className="relative z-10">
+              <div className="mb-2 flex items-center gap-2">
+                <span className="text-2xl transition-transform duration-300 group-hover/benefit:scale-110">🚀</span>
+                <span className="font-semibold">Small Teams</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Ship faster than well-funded competitors. 2-3 engineers with AI workflows
+                can outpace traditional teams of 20+ in both speed and quality.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Ship faster than well-funded competitors. 2-3 engineers with AI workflows
-              can outpace traditional teams of 20+ in both speed and quality.
-            </p>
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/benefit:translate-x-full" />
           </div>
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-2xl">🎯</span>
-              <span className="font-semibold">Forward-Thinking Engineers</span>
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+            {/* Gradient top border (shows on hover) */}
+            <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover/benefit:scale-x-100" />
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />
+            <div className="relative z-10">
+              <div className="mb-2 flex items-center gap-2">
+                <span className="text-2xl transition-transform duration-300 group-hover/benefit:scale-110">🎯</span>
+                <span className="font-semibold">Forward-Thinking Engineers</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Stay ahead of the curve. Learn AI-native workflows now before they become
+                the industry standard. Position yourself for the next decade of software development.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Stay ahead of the curve. Learn AI-native workflows now before they become
-              the industry standard. Position yourself for the next decade of software development.
-            </p>
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/benefit:translate-x-full" />
           </div>
         </div>
       </div>
