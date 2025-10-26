@@ -17,25 +17,41 @@ export const AutomationWorkflow: React.FC = () => {
 
       {/* Technology Stack Overview */}
       <div className="mb-6 grid gap-4 md:grid-cols-4">
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">📋</div>
-          <div className="font-semibold">Linear</div>
-          <div className="text-xs text-muted-foreground">Issue Tracking</div>
+        <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="relative z-10">
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">📋</div>
+            <div className="font-semibold">Linear</div>
+            <div className="text-xs text-muted-foreground">Issue Tracking</div>
+          </div>
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🐙</div>
-          <div className="font-semibold">GitHub</div>
-          <div className="text-xs text-muted-foreground">Version Control</div>
+        <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="relative z-10">
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🐙</div>
+            <div className="font-semibold">GitHub</div>
+            <div className="text-xs text-muted-foreground">Version Control</div>
+          </div>
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🚀</div>
-          <div className="font-semibold">Hetzner</div>
-          <div className="text-xs text-muted-foreground">Hosting & Deploy</div>
+        <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="relative z-10">
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🚀</div>
+            <div className="font-semibold">Hetzner</div>
+            <div className="text-xs text-muted-foreground">Hosting & Deploy</div>
+          </div>
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
-        <div className="rounded-lg border bg-card p-4 text-center shadow-sm">
-          <div className="mb-2 text-3xl">🔌</div>
-          <div className="font-semibold">MCP</div>
-          <div className="text-xs text-muted-foreground">AI Integration</div>
+        <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="relative z-10">
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🔌</div>
+            <div className="font-semibold">MCP</div>
+            <div className="text-xs text-muted-foreground">AI Integration</div>
+          </div>
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
       </div>
 
