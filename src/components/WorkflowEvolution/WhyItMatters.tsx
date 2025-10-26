@@ -127,10 +127,10 @@ export const WhyItMatters: React.FC = () => {
       </div>
 
       {/* Who Benefits Section */}
-      <div className="mt-8 rounded-lg border bg-muted/30 p-6">
-        <h4 className="mb-4 text-xl font-semibold">Who Benefits From This?</h4>
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+      <div className="group relative mt-8 overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <h4 className="relative z-[1] mb-6 text-xl font-semibold">Who Benefits From This?</h4>
+        <div className="relative z-[1] grid gap-6 md:grid-cols-3">
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
             {/* Gradient top border (shows on hover) */}
             <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/benefit:scale-x-100" />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />
@@ -146,7 +146,7 @@ export const WhyItMatters: React.FC = () => {
             </div>
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/benefit:translate-x-full" />
           </div>
-          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
             {/* Gradient top border (shows on hover) */}
             <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-transform group-hover/benefit:scale-x-100" />
             <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />
@@ -162,7 +162,7 @@ export const WhyItMatters: React.FC = () => {
             </div>
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/benefit:translate-x-full" />
           </div>
-          <div className="group/benefit relative overflow-hidden rounded-lg border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+          <div className="group/benefit relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
             {/* Gradient top border (shows on hover) */}
             <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover/benefit:scale-x-100" />
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/benefit:opacity-10" />

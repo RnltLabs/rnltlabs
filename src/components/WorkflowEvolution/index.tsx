@@ -63,7 +63,7 @@ export const WorkflowEvolution: React.FC = () => {
   return (
     <section
       id="workflow-evolution"
-      className="scroll-mt-20 bg-background py-20"
+      className="bg-background py-20"
       aria-labelledby="workflow-evolution-heading"
     >
       <div className="container mx-auto max-w-[1200px] px-8">
