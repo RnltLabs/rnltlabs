@@ -128,10 +128,13 @@ export const MCPServersModal: React.FC<MCPServersModalProps> = ({
                   GitHub 🐙
                 </div>
                 <div className="rounded border bg-card px-3 py-2 text-xs">
+                  Linear 📋
+                </div>
+                <div className="rounded border bg-card px-3 py-2 text-xs">
                   Database 🗄️
                 </div>
                 <div className="rounded border bg-card px-3 py-2 text-xs">
-                  Search 🔍
+                  Reasoning 🧠
                 </div>
               </div>
             </div>

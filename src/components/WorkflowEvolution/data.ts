@@ -315,6 +315,18 @@ export const aiAgents: AIAgent[] = [
 
 export const mcpServers: MCPServer[] = [
   {
+    id: 'sequential-thinking-mcp',
+    name: 'Sequential Thinking MCP',
+    purpose: 'Advanced reasoning and problem-solving',
+    capabilities: [
+      'Break down complex problems into steps',
+      'Chain of thought reasoning',
+      'Dynamic problem-solving with revision',
+      'Hypothesis generation and verification',
+    ],
+    integrations: ['AI agents', 'Complex analysis', 'Strategic planning'],
+  },
+  {
     id: 'github-mcp',
     name: 'GitHub MCP Server',
     purpose: 'Repository management and version control',
@@ -327,16 +339,16 @@ export const mcpServers: MCPServer[] = [
     integrations: ['Git workflow', 'PR automation', 'Code review process'],
   },
   {
-    id: 'filesystem-mcp',
-    name: 'Filesystem MCP Server',
-    purpose: 'File operations and code management',
+    id: 'linear-mcp',
+    name: 'Linear MCP Server',
+    purpose: 'Project management and issue tracking',
     capabilities: [
-      'Read and write files',
-      'Create directory structures',
-      'Search codebase',
-      'Manage file permissions',
+      'Create and update issues',
+      'Manage projects and initiatives',
+      'Track workflow states',
+      'Sync with development workflow',
     ],
-    integrations: ['Code generation', 'File organization', 'Asset management'],
+    integrations: ['Issue tracking', 'Project planning', 'Team collaboration'],
   },
   {
     id: 'postgres-mcp',
@@ -349,18 +361,6 @@ export const mcpServers: MCPServer[] = [
       'Performance monitoring',
     ],
     integrations: ['Data layer', 'Migration scripts', 'Database testing'],
-  },
-  {
-    id: 'brave-search-mcp',
-    name: 'Brave Search MCP Server',
-    purpose: 'Real-time information retrieval',
-    capabilities: [
-      'Search latest documentation',
-      'Find code examples',
-      'Research best practices',
-      'Verify package versions',
-    ],
-    integrations: ['Knowledge base', 'Documentation lookup', 'Package research'],
   },
 ];
 
