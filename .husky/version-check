@@ -1,0 +1,20 @@
+#!/bin/sh
+# Git hook to remind about version bumping before pushing to main
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$BRANCH" = "main" ]; then
+  echo ""
+  echo "⚠️  You're pushing to main!"
+  echo ""
+  echo "Did you bump the version?"
+  echo "  npm version patch  (1.0.3 → 1.0.4) - Bugfixes"
+  echo "  npm version minor  (1.0.3 → 1.1.0) - New features"
+  echo "  npm version major  (1.0.3 → 2.0.0) - Breaking changes"
+  echo ""
+  read -p "Continue anyway? (y/n) " -n 1 -r
+  echo
+  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    exit 1
+  fi
+fi
