@@ -12,21 +12,29 @@ export function LabStrategy() {
       icon: '⚡',
       title: 'Pre-hype adoption',
       description: 'Identify and apply new tech early',
+      gradientFrom: '#f97316',
+      gradientTo: '#ef4444',
     },
     {
       icon: '🚀',
       title: 'Speed',
       description: 'Rapid validation, lean prototyping, frequent releases',
+      gradientFrom: '#3b82f6',
+      gradientTo: '#06b6d4',
     },
     {
       icon: '🔧',
       title: 'Modularity',
       description: 'Agent-based architectures tailored to context',
+      gradientFrom: '#a855f7',
+      gradientTo: '#ec4899',
     },
     {
       icon: '📈',
       title: 'Production-first',
       description: 'Live testing and iteration from day one',
+      gradientFrom: '#22c55e',
+      gradientTo: '#10b981',
     },
   ]
 
@@ -58,10 +66,20 @@ export function LabStrategy() {
                 className="group/card relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg"
               >
                 {/* Gradient top border (shows on hover) */}
-                <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-primary to-accent transition-transform group-hover/card:scale-x-100" />
+                <div
+                  className="absolute left-0 top-0 h-0.5 w-full scale-x-0 transition-transform group-hover/card:scale-x-100"
+                  style={{
+                    backgroundImage: `linear-gradient(to right, ${strategy.gradientFrom}, ${strategy.gradientTo})`,
+                  }}
+                />
 
                 {/* Background gradient fade */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
+                <div
+                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10"
+                  style={{
+                    backgroundImage: `linear-gradient(to bottom right, ${strategy.gradientFrom}, ${strategy.gradientTo})`,
+                  }}
+                />
 
                 {/* Icon */}
                 <div className="relative z-10 mb-2 text-2xl transition-transform duration-300 group-hover/card:scale-110">
