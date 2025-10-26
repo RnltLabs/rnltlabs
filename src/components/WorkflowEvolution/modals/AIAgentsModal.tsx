@@ -27,7 +27,7 @@ export const AIAgentsModal: React.FC<AIAgentsModalProps> = ({
       aria-labelledby="agents-modal-title"
     >
       <div
-        className="relative flex max-h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl md:max-h-[85vh]"
+        className="relative flex max-h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

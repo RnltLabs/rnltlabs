@@ -31,7 +31,7 @@ export const WorkflowPhasesModal: React.FC<WorkflowPhasesModalProps> = ({
       aria-labelledby="phases-modal-title"
     >
       <div
-        className="relative flex max-h-[80vh] w-full max-w-4xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl md:max-h-[85vh]"
+        className="relative flex max-h-[80vh] w-full max-w-4xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
