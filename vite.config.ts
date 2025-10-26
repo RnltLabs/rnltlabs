@@ -17,6 +17,19 @@ export default defineConfig({
   build: {
     // Enable source maps for production (needed for GlitchTip error stacktraces)
     sourcemap: true,
+    // Performance: Set chunk size warning limit to 250KB
+    chunkSizeWarningLimit: 250,
+    // Code-splitting configuration
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor chunks for better caching
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-sentry': ['@sentry/react'],
+          'vendor-icons': ['lucide-react'],
+        },
+      },
+    },
   },
   define: {
     // Inject app version for Sentry release tracking
