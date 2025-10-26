@@ -81,16 +81,8 @@ export function TechStack() {
           {stack.map((item, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border bg-card p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
-              {/* Gradient top border */}
-              <div
-                className="absolute left-0 top-0 h-0.5 w-full scale-x-0 transition-transform group-hover:scale-x-100"
-                style={{
-                  backgroundImage: `linear-gradient(to right, ${item.gradientFrom}, ${item.gradientTo})`,
-                }}
-              />
-
               {/* Background gradient fade */}
               <div
                 className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-10"
@@ -100,7 +92,7 @@ export function TechStack() {
               />
 
               {/* Icon */}
-              <div className="relative z-10 mb-3 text-3xl transition-transform duration-300 group-hover:scale-110">{item.icon}</div>
+              <div className="relative z-10 mb-3 text-3xl">{item.icon}</div>
 
               {/* Title */}
               <h3 className="relative z-10 mb-1 text-base font-semibold text-foreground">
