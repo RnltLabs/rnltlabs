@@ -16,6 +16,8 @@ interface Project {
     label: string
     text: string
   }[]
+  gradientFrom: string
+  gradientTo: string
 }
 
 export function Projects() {
@@ -41,6 +43,8 @@ export function Projects() {
           text: 'React/TypeScript, Vite, Leaflet, shadcn/ui, Tailwind CSS',
         },
       ],
+      gradientFrom: '#3b82f6',
+      gradientTo: '#06b6d4',
     },
     {
       title: 'Massava',
@@ -63,6 +67,8 @@ export function Projects() {
           text: 'React/TypeScript, NestJS, PostgreSQL · MVP by end of year · 10k+ bookings/day architecture',
         },
       ],
+      gradientFrom: '#22c55e',
+      gradientTo: '#10b981',
     },
     {
       title: 'Product Development Copilot',
@@ -83,11 +89,13 @@ export function Projects() {
           text: 'React/TypeScript, NestJS, modular AI agents · Early prototype phase',
         },
       ],
+      gradientFrom: '#f97316',
+      gradientTo: '#ef4444',
     },
   ]
 
   return (
-    <section id="projects" className="bg-secondary py-20">
+    <section id="projects" className="bg-background py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Projects</h2>
 
@@ -96,8 +104,16 @@ export function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative mt-8 cursor-pointer overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group relative mt-8 cursor-pointer overflow-hidden rounded-2xl border bg-card p-10 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
+              {/* Background gradient fade */}
+              <div
+                className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+                style={{
+                  backgroundImage: `linear-gradient(to bottom right, ${project.gradientFrom}, ${project.gradientTo})`,
+                }}
+              />
+
               {/* Decorative gradient circle */}
               <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
@@ -182,6 +198,9 @@ export function Projects() {
                   </li>
                 ))}
               </ul>
+
+              {/* Shine effect */}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </div>
           ))}
         </div>

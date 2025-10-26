@@ -8,12 +8,15 @@
 
 export function Founder() {
   return (
-    <section id="founder" className="bg-background py-20">
+    <section id="founder" className="bg-secondary py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Founder</h2>
 
         {/* Founder Card */}
-        <div className="group relative mt-8 overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div className="group relative mt-8 overflow-hidden rounded-2xl border bg-card p-10 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
+          {/* Background gradient fade */}
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
           {/* Decorative gradient circle */}
           <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
@@ -57,12 +60,15 @@ export function Founder() {
                 </div>
 
                 {/* Founder Info */}
-                <div className="-mb-10 -ml-10 -mr-10 mt-6 border-t bg-card pb-10 pt-6 text-center text-sm text-muted-foreground">
+                <div className="relative -mb-10 -ml-10 -mr-10 mt-6 border-t pb-10 pt-6 text-center text-sm text-muted-foreground">
                   Master's student in Business Informatics · Based in Karlsruhe, Germany
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Shine effect */}
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
       </div>
     </section>
