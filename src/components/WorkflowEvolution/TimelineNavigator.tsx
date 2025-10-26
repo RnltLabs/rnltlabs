@@ -60,35 +60,17 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
   return (
     <div className="mb-12">
       {/* Section Header */}
-      <div className="mb-6 flex items-end justify-between">
-        <div>
-          <h2 className="mb-2 text-[2.5rem] font-semibold text-foreground">
-            Workflow Evolution
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            From manual processes to AI-powered automation
-          </p>
-        </div>
-
-        {/* Expand/Collapse Toggle */}
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="group inline-flex items-center gap-2 rounded-lg border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-        >
-          <span>{isExpanded ? 'Collapse' : 'Expand'} Details</span>
-          <svg
-            className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
+      <div className="mb-6">
+        <h2 className="mb-2 text-[2.5rem] font-semibold text-foreground">
+          Workflow Evolution
+        </h2>
+        <p className="text-lg text-muted-foreground">
+          From manual processes to AI-powered automation
+        </p>
       </div>
 
       {/* Horizontal Version Cards */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="workflow-details">
         {versions.map((version, versionIndex) => {
           const isLast = versionIndex === versions.length - 1;
 
@@ -149,7 +131,7 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
 
               {/* Expanded Details - Conditional */}
               {isExpanded && (
-                <div className="relative space-y-3 p-5">
+                <div className="relative space-y-3 p-5 pb-6">
                   {metrics.map((metric) => {
                     const value = getValue(version, metric.key);
                     const displayValue = metric.isPercent && typeof value === 'number'
@@ -178,6 +160,28 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
             </div>
           );
         })}
+      </div>
+
+      {/* Expand/Collapse Toggle - Centered Below Cards */}
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="group inline-flex items-center gap-2 rounded-lg border bg-card px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/20"
+          aria-expanded={isExpanded}
+          aria-controls="workflow-details"
+          type="button"
+        >
+          <span>{isExpanded ? 'Show Less' : 'Show More Details'}</span>
+          <svg
+            className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
       </div>
 
     </div>
