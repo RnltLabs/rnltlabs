@@ -51,20 +51,20 @@ export function LabStrategy() {
           </p>
 
           {/* Strategy Grid */}
-          <div className="relative z-[1] grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-[1] grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {strategies.map((strategy, index) => (
               <div
                 key={index}
                 className="group/card relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg"
               >
-                {/* Gradient top border (hidden, shows on hover) */}
+                {/* Gradient top border (shows on hover) */}
                 <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-primary to-accent transition-transform group-hover/card:scale-x-100" />
 
                 {/* Background gradient fade */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
 
                 {/* Icon */}
-                <div className="relative z-10 mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-base transition-transform duration-300 group-hover/card:scale-110">
+                <div className="relative z-10 mb-2 text-2xl transition-transform duration-300 group-hover/card:scale-110">
                   {strategy.icon}
                 </div>
 
