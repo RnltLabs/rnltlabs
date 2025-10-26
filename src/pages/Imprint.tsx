@@ -182,7 +182,58 @@ export function Imprint() {
               Vertrags oder vorvertraglicher Maßnahmen).
             </p>
 
-            <p className="mb-2 font-medium text-foreground">c) Externe Links (LinkedIn, GitHub)</p>
+            <p className="mb-2 font-medium text-foreground">c) Cookies und Web-Analyse (Umami Analytics)</p>
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              Diese Website verwendet Umami Analytics, ein datenschutzfreundliches
+              Web-Analyse-Tool, um die Nutzung der Website zu analysieren und zu verbessern. Umami
+              wird auf eigenen Servern in Deutschland (Hetzner) gehostet und erfasst anonymisierte
+              Daten.
+            </p>
+
+            <div className="mb-4 rounded-lg bg-secondary p-4">
+              <p className="mb-2 font-medium text-foreground">Erfasste Daten:</p>
+              <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+                <li>Anonymisierte IP-Adresse (gekürzt, keine Rückverfolgung möglich)</li>
+                <li>Browser-Typ und Version</li>
+                <li>Betriebssystem</li>
+                <li>Besuchte Seiten und Verweildauer</li>
+                <li>Referrer (woher Sie auf die Website gekommen sind)</li>
+              </ul>
+            </div>
+
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              <strong className="font-medium text-foreground">Wichtig:</strong> Umami Analytics
+              setzt keine Cookies von Drittanbietern und speichert keine personenbezogenen Daten.
+              Die Erfassung erfolgt nur mit Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+            </p>
+
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              <strong className="font-medium text-foreground">Speicherdauer:</strong> Die
+              analysierten Daten werden für maximal 12 Monate gespeichert und anschließend
+              automatisch gelöscht.
+            </p>
+
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              <strong className="font-medium text-foreground">Widerruf Ihrer
+              Einwilligung:</strong> Sie können Ihre Einwilligung jederzeit in den{' '}
+              <a
+                href="/cookie-settings"
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
+                Cookie-Einstellungen
+              </a>{' '}
+              widerrufen. Der Widerruf wirkt für die Zukunft und berührt nicht die Rechtmäßigkeit
+              der bis zum Widerruf erfolgten Datenverarbeitung.
+            </p>
+
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              Ihre Cookie-Einwilligung wird in Ihrem Browser als lokaler Cookie gespeichert
+              (Name: <code className="rounded bg-secondary px-1 py-0.5 text-sm">cookie-consent</code>,
+              Speicherdauer: 12 Monate). Dieser Cookie ist technisch notwendig, um Ihre Präferenz
+              zu speichern.
+            </p>
+
+            <p className="mb-2 font-medium text-foreground">d) Externe Links (LinkedIn, GitHub)</p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
               Beim Anklicken externer Links (z. B. LinkedIn, GitHub) werden Daten an den jeweiligen
               Anbieter übertragen. Ich habe keinen Einfluss auf die Verarbeitung durch den
@@ -236,12 +287,21 @@ export function Imprint() {
       <footer className="relative z-[105] bg-foreground py-4 text-white">
         <div className="container mx-auto text-center">
           <p className="mb-1 text-lg opacity-90">We test in production so you don't have to.</p>
-          <a
-            href="/imprint"
-            className="inline-block px-3 py-2 text-sm opacity-70 transition-opacity hover:opacity-100 focus:opacity-100 active:opacity-100"
-          >
-            Imprint
-          </a>
+          <div className="flex items-center justify-center gap-1">
+            <a
+              href="/imprint"
+              className="inline-block px-3 py-2 text-sm opacity-70 transition-opacity hover:opacity-100 focus:opacity-100 active:opacity-100"
+            >
+              Imprint
+            </a>
+            <span className="text-sm opacity-50">|</span>
+            <a
+              href="/cookie-settings"
+              className="inline-block px-3 py-2 text-sm opacity-70 transition-opacity hover:opacity-100 focus:opacity-100 active:opacity-100"
+            >
+              Cookie Settings
+            </a>
+          </div>
         </div>
       </footer>
     </div>

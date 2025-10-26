@@ -18,7 +18,7 @@ import { GitHooksModal } from './modals/GitHooksModal';
 import { workflowVersions, aiAgents, mcpServers, gitHooks } from './data';
 import type { ModalType } from './types';
 
-export const WorkflowEvolution: React.FC = () => {
+const WorkflowEvolution: React.FC = () => {
   // State management
   const [activeModal, setActiveModal] = useState<ModalType>(null);
 
