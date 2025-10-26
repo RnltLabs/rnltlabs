@@ -8,7 +8,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { TimelineNavigator } from './TimelineNavigator';
-import { ComparisonTable } from './ComparisonTable';
 import { DeepDiveCards } from './DeepDiveCards';
 import { AIAgentsModal } from './modals/AIAgentsModal';
 import { WorkflowPhasesModal } from './modals/WorkflowPhasesModal';
@@ -20,7 +19,6 @@ import type { ModalType } from './types';
 export const WorkflowEvolution: React.FC = () => {
   // State management
   const [activeModal, setActiveModal] = useState<ModalType>(null);
-  const [showComparison, setShowComparison] = useState(false);
 
   // Get current version (v2 - AI-Powered) for Deep Dive counts
   const currentVersion = workflowVersions[2]; // v2
@@ -34,35 +32,22 @@ export const WorkflowEvolution: React.FC = () => {
     setActiveModal(null);
   };
 
-  // Handle comparison table
-  const handleShowComparison = (): void => {
-    setShowComparison(true);
-  };
-
-  const handleCloseComparison = (): void => {
-    setShowComparison(false);
-  };
-
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent): void => {
-      // ESC to close modal or comparison
-      if (event.key === 'Escape') {
-        if (showComparison) {
-          handleCloseComparison();
-        } else if (activeModal) {
-          handleModalClose();
-        }
+      // ESC to close modal
+      if (event.key === 'Escape' && activeModal) {
+        handleModalClose();
       }
     };
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [activeModal, showComparison]);
+  }, [activeModal]);
 
-  // Prevent body scroll when modal or comparison is open
+  // Prevent body scroll when modal is open
   useEffect(() => {
-    if (activeModal || showComparison) {
+    if (activeModal) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -71,7 +56,7 @@ export const WorkflowEvolution: React.FC = () => {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [activeModal, showComparison]);
+  }, [activeModal]);
 
   return (
     <section
@@ -80,11 +65,8 @@ export const WorkflowEvolution: React.FC = () => {
       aria-labelledby="workflow-evolution-heading"
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Timeline Navigator - Non-interactive, all versions visible */}
-        <TimelineNavigator
-          versions={workflowVersions}
-          onShowComparison={handleShowComparison}
-        />
+        {/* Timeline Navigator - Expandable cards */}
+        <TimelineNavigator versions={workflowVersions} />
 
         {/* Deep Dive Cards */}
         <DeepDiveCards
@@ -95,14 +77,6 @@ export const WorkflowEvolution: React.FC = () => {
           hookCount={currentVersion.features.hooks}
         />
       </div>
-
-      {/* Comparison Table Modal */}
-      {showComparison && (
-        <ComparisonTable
-          versions={workflowVersions}
-          onClose={handleCloseComparison}
-        />
-      )}
 
       {/* Modals */}
       <AIAgentsModal
