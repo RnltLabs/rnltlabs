@@ -51,10 +51,10 @@ export function TechStack() {
   ]
 
   return (
-    <section id="tech-stack" className="bg-background py-20">
+    <section id="tech-stack" className="bg-secondary py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">
-          Production-Grade Tech Stack
+          Tech Stack
         </h2>
         <p className="mb-12 text-lg text-muted-foreground">
           Modern technologies for reliable, scalable applications

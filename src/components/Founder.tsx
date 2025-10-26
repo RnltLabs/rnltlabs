@@ -8,7 +8,7 @@
 
 export function Founder() {
   return (
-    <section id="founder" className="bg-background py-20">
+    <section id="founder" className="bg-secondary py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
         <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Founder</h2>
 

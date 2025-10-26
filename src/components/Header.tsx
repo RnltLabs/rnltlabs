@@ -18,7 +18,8 @@ export function Header() {
   const navLinks = [
     { href: '#strategy', label: 'The Lab' },
     { href: '#projects', label: 'Projects' },
-    { href: '#process', label: 'Workflow' },
+    { href: '#tech-stack', label: 'Tech Stack' },
+    { href: '#workflow-evolution', label: 'Workflow' },
     { href: '#founder', label: 'Founder' },
     { href: '#contact', label: 'Contact' },
   ]
