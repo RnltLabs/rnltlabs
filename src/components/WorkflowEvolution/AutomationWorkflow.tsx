@@ -18,45 +18,45 @@ export const AutomationWorkflow: React.FC = () => {
       {/* Technology Stack Overview */}
       <div className="mb-6 grid gap-4 md:grid-cols-4">
         <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
           <div className="relative z-10">
-            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">📋</div>
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover/card:scale-110">📋</div>
             <div className="font-semibold">Linear</div>
             <div className="text-xs text-muted-foreground">Issue Tracking</div>
           </div>
-          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
         </div>
         <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
           <div className="relative z-10">
-            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🐙</div>
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover/card:scale-110">🐙</div>
             <div className="font-semibold">GitHub</div>
             <div className="text-xs text-muted-foreground">Version Control</div>
           </div>
-          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
         </div>
         <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
           <div className="relative z-10">
-            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🚀</div>
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover/card:scale-110">🚀</div>
             <div className="font-semibold">Hetzner</div>
             <div className="text-xs text-muted-foreground">Hosting & Deploy</div>
           </div>
-          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
         </div>
         <div className="group relative overflow-hidden rounded-lg border bg-card p-4 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
           <div className="relative z-10">
-            <div className="mb-2 text-3xl transition-transform duration-300 group-hover:scale-110">🔌</div>
+            <div className="mb-2 text-3xl transition-transform duration-300 group-hover/card:scale-110">🔌</div>
             <div className="font-semibold">MCP</div>
             <div className="text-xs text-muted-foreground">AI Integration</div>
           </div>
-          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
         </div>
       </div>
 
       {/* Main Workflow Diagram */}
-      <div className="rounded-lg border bg-card p-8 shadow-md">
+      <div className="group relative overflow-hidden rounded-lg border bg-card p-8 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
         {/* Workflow Steps */}
         <div className="space-y-6">
           {/* Step 1: Planning */}
@@ -70,11 +70,13 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Planning & Issue Creation</h4>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">📋</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">📋</span>
                         <span className="font-semibold">Linear</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -83,13 +85,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Track status through workflow states</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🤖</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🤖</span>
                         <span className="font-semibold">AI Agent</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -98,7 +102,7 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Estimate complexity</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -117,11 +121,13 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Development & Code Generation</h4>
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🐙</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🐙</span>
                         <span className="font-semibold">GitHub</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -130,13 +136,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Track commits</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🔌</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🔌</span>
                         <span className="font-semibold">MCP Servers</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -145,13 +153,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Database operations</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">⚙️</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">⚙️</span>
                         <span className="font-semibold">AI Agents</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -160,7 +170,7 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Create documentation</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -179,11 +189,13 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Review & Quality Checks</h4>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-amber-500 to-orange-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🪝</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🪝</span>
                         <span className="font-semibold">Git Hooks</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -192,13 +204,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Post-merge: Update dependencies</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">👁️</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">👁️</span>
                         <span className="font-semibold">AI Review</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -207,7 +221,7 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Performance optimization</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
                 </div>
               </div>
@@ -226,11 +240,13 @@ export const AutomationWorkflow: React.FC = () => {
               <div className="flex-1">
                 <h4 className="mb-2 text-lg font-semibold">Deployment & Monitoring</h4>
                 <div className="grid gap-4 md:grid-cols-3">
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-blue-500 to-cyan-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🐙</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🐙</span>
                         <span className="font-semibold">GitHub PR</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -239,13 +255,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Run CI/CD pipeline</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-orange-500 to-red-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">🚀</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">🚀</span>
                         <span className="font-semibold">Hetzner</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -254,13 +272,15 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Promote to production</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
-                  <div className="group relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+                  <div className="group/card relative overflow-hidden rounded-lg border bg-muted/30 p-4 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg">
+                    {/* Gradient top border (shows on hover) */}
+                    <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover/card:scale-x-100" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10" />
                     <div className="relative z-10">
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-2xl transition-transform duration-300 group-hover:scale-110">📋</span>
+                        <span className="text-2xl transition-transform duration-300 group-hover/card:scale-110">📋</span>
                         <span className="font-semibold">Linear</span>
                       </div>
                       <ul className="space-y-1 text-sm text-muted-foreground">
@@ -269,7 +289,7 @@ export const AutomationWorkflow: React.FC = () => {
                         <li>• Track deployment metrics</li>
                       </ul>
                     </div>
-                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
                   </div>
                 </div>
               </div>
