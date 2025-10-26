@@ -1,0 +1,66 @@
+name: Auto Version Bump
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Determine version bump
+        id: version
+        run: |
+          # Get commit messages since last tag
+          COMMITS=$(git log $(git describe --tags --abbrev=0 2>/dev/null || echo "")..HEAD --pretty=format:"%s")
+
+          # Determine bump type based on conventional commits
+          if echo "$COMMITS" | grep -qE "^(feat!|BREAKING CHANGE)"; then
+            echo "bump=major" >> $GITHUB_OUTPUT
+          elif echo "$COMMITS" | grep -qE "^feat(\(.+\))?:"; then
+            echo "bump=minor" >> $GITHUB_OUTPUT
+          elif echo "$COMMITS" | grep -qE "^(fix|perf|refactor)(\(.+\))?:"; then
+            echo "bump=patch" >> $GITHUB_OUTPUT
+          else
+            echo "bump=none" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Bump version
+        if: steps.version.outputs.bump != 'none'
+        run: |
+          npm version ${{ steps.version.outputs.bump }} -m "chore(release): Release v%s [skip ci]"
+          git push --follow-tags
+
+      - name: Create GitHub Release
+        if: steps.version.outputs.bump != 'none'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.new_version }}
+          release_name: Release v${{ steps.version.outputs.new_version }}
+          body: |
+            Automated release created from main branch.
+
+            See commit history for details.
+          draft: false
+          prerelease: false
