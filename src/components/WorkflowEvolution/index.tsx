@@ -9,6 +9,8 @@
 import React, { useState, useEffect } from 'react';
 import { TimelineNavigator } from './TimelineNavigator';
 import { DeepDiveCards } from './DeepDiveCards';
+import { AutomationWorkflow } from './AutomationWorkflow';
+import { WhyItMatters } from './WhyItMatters';
 import { AIAgentsModal } from './modals/AIAgentsModal';
 import { WorkflowPhasesModal } from './modals/WorkflowPhasesModal';
 import { MCPServersModal } from './modals/MCPServersModal';
@@ -61,7 +63,7 @@ export const WorkflowEvolution: React.FC = () => {
   return (
     <section
       id="workflow-evolution"
-      className="scroll-mt-20 bg-background py-20"
+      className="bg-background py-20"
       aria-labelledby="workflow-evolution-heading"
     >
       <div className="container mx-auto max-w-[1200px] px-8">
@@ -76,6 +78,12 @@ export const WorkflowEvolution: React.FC = () => {
           mcpCount={currentVersion.features.mcpServers}
           hookCount={currentVersion.features.hooks}
         />
+
+        {/* Complete Automation Flow */}
+        <AutomationWorkflow />
+
+        {/* Why It Matters Section */}
+        <WhyItMatters />
       </div>
 
       {/* Modals */}

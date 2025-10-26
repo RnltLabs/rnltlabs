@@ -12,21 +12,29 @@ export function LabStrategy() {
       icon: '⚡',
       title: 'Pre-hype adoption',
       description: 'Identify and apply new tech early',
+      gradientFrom: '#f97316',
+      gradientTo: '#ef4444',
     },
     {
       icon: '🚀',
       title: 'Speed',
       description: 'Rapid validation, lean prototyping, frequent releases',
+      gradientFrom: '#3b82f6',
+      gradientTo: '#06b6d4',
     },
     {
       icon: '🔧',
       title: 'Modularity',
       description: 'Agent-based architectures tailored to context',
+      gradientFrom: '#a855f7',
+      gradientTo: '#ec4899',
     },
     {
       icon: '📈',
       title: 'Production-first',
       description: 'Live testing and iteration from day one',
+      gradientFrom: '#22c55e',
+      gradientTo: '#10b981',
     },
   ]
 
@@ -48,32 +56,51 @@ export function LabStrategy() {
           </p>
 
           {/* Strategy Grid */}
-          <div className="relative z-[1] grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-[1] grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {strategies.map((strategy, index) => (
               <div
                 key={index}
                 className="group/card relative overflow-hidden rounded-lg border bg-secondary p-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:shadow-lg"
               >
-                {/* Gradient top border (hidden, shows on hover) */}
-                <div className="absolute left-0 top-0 h-0.5 w-full scale-x-0 bg-gradient-to-r from-primary to-accent transition-transform group-hover/card:scale-x-100" />
+                {/* Gradient top border (shows on hover) */}
+                <div
+                  className="absolute left-0 top-0 h-0.5 w-full scale-x-0 transition-transform group-hover/card:scale-x-100"
+                  style={{
+                    backgroundImage: `linear-gradient(to right, ${strategy.gradientFrom}, ${strategy.gradientTo})`,
+                  }}
+                />
+
+                {/* Background gradient fade */}
+                <div
+                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover/card:opacity-10"
+                  style={{
+                    backgroundImage: `linear-gradient(to bottom right, ${strategy.gradientFrom}, ${strategy.gradientTo})`,
+                  }}
+                />
 
                 {/* Icon */}
-                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-base">
+                <div className="relative z-10 mb-2 text-2xl transition-transform duration-300 group-hover/card:scale-110">
                   {strategy.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-1 text-[0.95rem] font-semibold text-foreground">
+                <h3 className="relative z-10 mb-1 text-[0.95rem] font-semibold text-foreground">
                   {strategy.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[0.8rem] leading-snug text-muted-foreground">
+                <p className="relative z-10 text-[0.8rem] leading-snug text-muted-foreground">
                   {strategy.description}
                 </p>
+
+                {/* Shine effect */}
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover/card:translate-x-full" />
               </div>
             ))}
           </div>
+
+          {/* Shine effect on outer card */}
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
         </div>
       </div>
     </section>
