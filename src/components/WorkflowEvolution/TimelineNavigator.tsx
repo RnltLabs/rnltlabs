@@ -70,7 +70,7 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
       </div>
 
       {/* Horizontal Version Cards */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="workflow-details">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch" id="workflow-details">
         {versions.map((version, versionIndex) => {
           const isLast = versionIndex === versions.length - 1;
 
@@ -96,13 +96,13 @@ export const TimelineNavigator: React.FC<TimelineNavigatorProps> = ({
           return (
             <div
               key={version.id}
-              className="group relative overflow-hidden rounded-xl border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="group relative flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               {/* Subtle hover gradient */}
               <div className={`pointer-events-none absolute right-0 top-0 h-[80px] w-[80px] translate-x-[20px] translate-y-[-20px] rounded-full bg-gradient-to-br from-transparent opacity-0 transition-opacity group-hover:opacity-100 ${bgColor}`} />
 
               {/* Header - Always visible */}
-              <div className={`relative border-b p-5 ${bgColor}`}>
+              <div className={`relative p-5 ${!isExpanded ? 'flex-1' : 'border-b'} ${bgColor}`}>
                 <div className="mb-3 flex items-center justify-between">
                   <span className="text-xs font-mono font-semibold text-muted-foreground">
                     VERSION {versionNumber}

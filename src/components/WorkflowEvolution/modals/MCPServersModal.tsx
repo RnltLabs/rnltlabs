@@ -20,23 +20,23 @@ export const MCPServersModal: React.FC<MCPServersModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 md:p-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="mcp-modal-title"
     >
       <div
-        className="relative max-h-[calc(100vh-140px)] w-full max-w-5xl overflow-hidden rounded-lg bg-background shadow-2xl"
+        className="relative flex max-h-[calc(100vh-2rem)] w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl md:max-h-[calc(100vh-3rem)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 z-10 border-b bg-background p-6">
+        <div className="flex-shrink-0 border-b bg-background p-4 md:p-6">
           <div className="flex items-center justify-between">
             <div>
               <h2
                 id="mcp-modal-title"
-                className="text-2xl font-bold"
+                className="text-xl font-bold md:text-2xl"
               >
                 🔌 MCP Servers ({servers.length})
               </h2>
@@ -67,7 +67,7 @@ export const MCPServersModal: React.FC<MCPServersModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto p-6 pb-24" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+        <div className="flex-1 overflow-y-auto p-4 pb-6 md:p-6 md:pb-8">
           {/* Architecture Diagram */}
           <div className="mb-8 rounded-lg border bg-muted/30 p-6">
             <h3 className="mb-4 text-lg font-semibold">MCP Architecture</h3>
