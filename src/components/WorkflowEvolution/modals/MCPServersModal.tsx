@@ -27,7 +27,7 @@ export const MCPServersModal: React.FC<MCPServersModalProps> = ({
       aria-labelledby="mcp-modal-title"
     >
       <div
-        className="relative flex max-h-[calc(100vh-2rem)] w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl md:max-h-[calc(100vh-3rem)]"
+        className="relative flex max-h-[80vh] w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-background shadow-2xl md:max-h-[85vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
