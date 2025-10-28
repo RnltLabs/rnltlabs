@@ -83,7 +83,7 @@ jobs:
                 },
                 {
                   "name": "URL",
-                  "value": "[Open App](https://staging.rnltlabs.de/)",
+                  "value": "[Open App](https://staging.massava.app/)",
                   "inline": false
                 },
                 {

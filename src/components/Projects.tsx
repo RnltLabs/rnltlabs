@@ -49,7 +49,7 @@ export function Projects() {
     {
       title: 'Massava',
       status: 'Early Stage MVP',
-      link: 'https://staging.rnltlabs.de/massava/',
+      link: 'https://staging.massava.app/',
       githubUrl: 'https://github.com/RnltLabs/massava',
       summary:
         'A booking platform for service providers. Streamlines appointment scheduling and reduces administrative overhead.',
