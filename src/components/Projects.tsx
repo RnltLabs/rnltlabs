@@ -102,28 +102,6 @@ export function Projects() {
       gradientFrom: '#22c55e',
       gradientTo: '#10b981',
     },
-    {
-      title: 'Product Development Copilot',
-      status: 'Planning',
-      summary:
-        'A tool for structured product development. Helps transform high-level ideas into actionable steps. Currently in planning phase for personal use.',
-      highlights: [
-        {
-          label: 'Problem',
-          text: 'Turning abstract product visions into structured execution plans is slow and fragmented',
-        },
-        {
-          label: 'Solution',
-          text: 'AI-powered guidance for product ideation, planning, and execution tracking',
-        },
-        {
-          label: 'Tech Stack',
-          text: 'React/TypeScript, NestJS, modular AI agents · Early prototype phase',
-        },
-      ],
-      gradientFrom: '#f97316',
-      gradientTo: '#ef4444',
-    },
   ]
 
   return (
