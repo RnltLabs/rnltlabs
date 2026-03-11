@@ -11,23 +11,23 @@ export function TechStack() {
     {
       icon: '⚛️',
       title: 'React + TypeScript',
-      description: 'Type-safe frontend',
+      description: 'Web & Mobile frontends',
       gradientFrom: '#3b82f6',
       gradientTo: '#06b6d4',
     },
     {
-      icon: '🎯',
-      title: 'Next.js App Router',
-      description: 'Server-side rendering',
-      gradientFrom: '#a855f7',
-      gradientTo: '#ec4899',
-    },
-    {
       icon: '🗄️',
-      title: 'PostgreSQL + Prisma',
-      description: 'Type-safe database',
+      title: 'PostgreSQL + Supabase',
+      description: 'Database, auth & vector search',
       gradientFrom: '#22c55e',
       gradientTo: '#10b981',
+    },
+    {
+      icon: '🤖',
+      title: 'Agentic AI + LLMs',
+      description: 'Autonomous AI agents & tool systems',
+      gradientFrom: '#a855f7',
+      gradientTo: '#ec4899',
     },
     {
       icon: '🐳',
@@ -49,13 +49,6 @@ export function TechStack() {
       description: 'Automated deployments',
       gradientFrom: '#9333ea',
       gradientTo: '#7c3aed',
-    },
-    {
-      icon: '✅',
-      title: 'ESLint + TS Strict',
-      description: 'Code quality gates',
-      gradientFrom: '#eab308',
-      gradientTo: '#f59e0b',
     },
     {
       icon: '📊',
