@@ -6,11 +6,17 @@
  * For licensing information, contact: hello@rnltlabs.de
  */
 
+interface GithubRepo {
+  url: string
+  label: string
+}
+
 interface Project {
   title: string
   status: string
   link?: string
   githubUrl?: string
+  githubUrls?: GithubRepo[]
   summary: string
   highlights: {
     label: string
@@ -47,6 +53,32 @@ export function Projects() {
       gradientTo: '#06b6d4',
     },
     {
+      title: 'Athletly',
+      status: 'MVP',
+      githubUrls: [
+        { url: 'https://github.com/RnltLabs/athletly-app', label: 'App' },
+        { url: 'https://github.com/RnltLabs/athletly-backend', label: 'Backend' },
+      ],
+      summary:
+        'An autonomous AI sports coaching engine with a Claude Code-inspired agentic loop. Built on LiteLLM for provider-agnostic model routing, Supabase with pgvector for belief-driven memory, and real-time SSE streaming.',
+      highlights: [
+        {
+          label: 'Problem',
+          text: 'Generic training plans ignore individual progression, recovery signals, and real-time health data',
+        },
+        {
+          label: 'Solution',
+          text: 'Autonomous agentic loop with 20+ tools, belief-driven athlete modeling with confidence scoring, proactive intelligence, and a sandboxed CalcEngine — zero hardcoded sport logic, the LLM reasons, the code computes',
+        },
+        {
+          label: 'Tech Stack',
+          text: 'React Native/Expo, FastAPI/Python, LiteLLM (Gemini 2.5 Flash + Claude/OpenAI fallback), Supabase (PostgreSQL + pgvector + RLS), Redis, Apple Health/Garmin/Google Health Connect',
+        },
+      ],
+      gradientFrom: '#8b5cf6',
+      gradientTo: '#a855f7',
+    },
+    {
       title: 'Massava',
       status: 'Early Stage MVP',
       link: 'https://staging.massava.app/',
@@ -69,28 +101,6 @@ export function Projects() {
       ],
       gradientFrom: '#22c55e',
       gradientTo: '#10b981',
-    },
-    {
-      title: 'Product Development Copilot',
-      status: 'Planning',
-      summary:
-        'A tool for structured product development. Helps transform high-level ideas into actionable steps. Currently in planning phase for personal use.',
-      highlights: [
-        {
-          label: 'Problem',
-          text: 'Turning abstract product visions into structured execution plans is slow and fragmented',
-        },
-        {
-          label: 'Solution',
-          text: 'AI-powered guidance for product ideation, planning, and execution tracking',
-        },
-        {
-          label: 'Tech Stack',
-          text: 'React/TypeScript, NestJS, modular AI agents · Early prototype phase',
-        },
-      ],
-      gradientFrom: '#f97316',
-      gradientTo: '#ef4444',
     },
   ]
 
@@ -167,6 +177,30 @@ export function Projects() {
                       </svg>
                     </a>
                   )}
+                  {project.githubUrls?.map((repo) => (
+                    <a
+                      key={repo.label}
+                      href={repo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-primary transition-colors hover:text-accent"
+                      aria-label={`View ${repo.label} on GitHub`}
+                      title={`GitHub — ${repo.label}`}
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                        />
+                      </svg>
+                      <span className="text-[0.75rem] font-medium">{repo.label}</span>
+                    </a>
+                  ))}
                 </div>
                 <span
                   className={`inline-block whitespace-nowrap rounded-full border px-3 py-1 text-[0.8rem] font-medium ${
