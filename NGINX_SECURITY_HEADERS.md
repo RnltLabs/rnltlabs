@@ -47,8 +47,8 @@ server {
     add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
 
     # Content Security Policy (STRICT)
-    # Allows: self-hosted content, analytics.rnltlabs.de, errors.rnltlabs.de
-    add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" always;
+    # Allows: self-hosted content, analytics.rnltlabs.de, errors.rnltlabs.de, api.web3forms.com (contact form)
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" always;
 
     # Hide nginx version number
     server_tokens off;
@@ -114,7 +114,7 @@ server {
 - `style-src 'self' 'unsafe-inline'` - Allow styles from self and inline (Tailwind uses inline styles)
 - `img-src 'self' data: https:` - Allow images from self, data URIs, and any HTTPS source
 - `font-src 'self' data:` - Allow fonts from self and data URIs
-- `connect-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de` - Allow AJAX/fetch to self, Umami, GlitchTip
+- `connect-src 'self' https://analytics.rnltlabs.de https://errors.rnltlabs.de https://api.web3forms.com` - Allow AJAX/fetch to self, Umami, GlitchTip, and Web3Forms (contact form)
 - `frame-ancestors 'none'` - Don't allow embedding (same as X-Frame-Options)
 - `base-uri 'self'` - Restrict `<base>` tag to same origin
 - `form-action 'self'` - Forms can only submit to same origin
