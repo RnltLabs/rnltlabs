@@ -9,19 +9,20 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
+import { useLanguage } from '../i18n/LanguageContext'
+import { LanguageToggle } from './LanguageToggle'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const { t } = useLanguage()
 
   const navLinks = [
-    { href: '#strategy', label: 'The Lab' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#tech-stack', label: 'Tech Stack' },
-    { href: '#workflow-evolution', label: 'Workflow' },
-    { href: '#founder', label: 'Founder' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#services', label: t.nav.services },
+    { href: '#proof', label: t.nav.proof },
+    { href: '#about', label: t.nav.about },
+    { href: '#contact', label: t.nav.contact },
   ]
 
   const handleLinkClick = () => {
@@ -42,36 +43,37 @@ export function Header() {
               />
             </a>
 
-            {/* Desktop Navigation - only show on homepage */}
-            {isHomePage && (
-              <ul className="hidden items-center gap-8 md:flex">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-[0.95rem] text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
+            {/* Right side: nav + language toggle */}
+            <div className="flex items-center gap-4">
+              {/* Desktop Navigation - only show on homepage */}
+              {isHomePage && (
+                <ul className="hidden items-center gap-7 md:flex">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        className="text-[0.95rem] text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-            {/* Mobile Menu Button - only show on homepage */}
-            {isHomePage && (
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="z-[102] rounded-md p-2 md:hidden"
-                aria-label="Toggle mobile menu"
-              >
-                {mobileMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
-            )}
+              <LanguageToggle />
+
+              {/* Mobile Menu Button - only show on homepage */}
+              {isHomePage && (
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="z-[102] rounded-md p-2 md:hidden"
+                  aria-label="Toggle mobile menu"
+                >
+                  {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </nav>

@@ -6,11 +6,16 @@
  * For licensing information, contact: hello@rnltlabs.de
  */
 
+import { useLanguage } from '../i18n/LanguageContext'
+
 export function Founder() {
+  const { t } = useLanguage()
+  const a = t.about
+
   return (
-    <section id="founder" className="bg-secondary py-20">
+    <section id="about" className="bg-background py-20">
       <div className="container mx-auto max-w-[1200px] px-8">
-        <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">Founder</h2>
+        <h2 className="mb-4 text-[2.5rem] font-semibold text-foreground">{a.title}</h2>
 
         {/* Founder Card */}
         <div className="group relative mt-8 overflow-hidden rounded-2xl border bg-card p-10 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
@@ -50,27 +55,16 @@ export function Founder() {
               {/* Right: Bio Text */}
               <div className="flex min-h-[220px] flex-1 flex-col justify-between">
                 <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    I run RNLT Labs to build products that solve real problems for real people -
-                    spotting gaps others overlook, exploring underserved niches, broken workflows,
-                    and opportunities hiding in plain sight.
-                  </p>
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    What drives me is the entire product journey: understanding problems, shaping
-                    ideas, designing solutions, building, testing, and launching production-ready
-                    products with focus and velocity. I dive into emerging technologies early to
-                    learn how they can accelerate delivery and keep me ahead of the curve.
-                  </p>
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    This is not about freelancing or client work. RNLT Labs is where I pursue my own
-                    ideas, explore bold concepts, push technical boundaries, and take full ownership
-                    from concept to launch.
-                  </p>
+                  {a.paragraphs.map((para, i) => (
+                    <p key={i} className="text-lg leading-relaxed text-muted-foreground">
+                      {para}
+                    </p>
+                  ))}
                 </div>
 
-                {/* Founder Info */}
+                {/* About meta */}
                 <div className="relative -mb-10 -ml-10 -mr-10 mt-6 border-t pb-10 pt-6 text-center text-sm text-muted-foreground">
-                  Master's student in Business Informatics · Based in Karlsruhe, Germany
+                  {a.meta}
                 </div>
               </div>
             </div>

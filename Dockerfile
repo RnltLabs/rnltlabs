@@ -16,6 +16,10 @@ RUN echo "Building commit: $GIT_COMMIT"
 # Copy source code
 COPY . .
 
+# Build-time env for Vite (public Web3Forms client key, injected from a CI secret)
+ARG VITE_WEB3FORMS_ACCESS_KEY
+ENV VITE_WEB3FORMS_ACCESS_KEY=$VITE_WEB3FORMS_ACCESS_KEY
+
 # Build the app
 RUN npm run build
 

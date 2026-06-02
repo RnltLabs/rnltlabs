@@ -8,14 +8,14 @@
 
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const COOKIE_CONSENT_KEY = 'cookie-consent'
+const CONSENT_KEY = 'cookie-consent'
 
 /**
  * Loads the Umami Analytics script dynamically when user consents
  */
 function loadUmamiScript(): void {
-  // Check if script is already loaded
   const existingScript = document.querySelector('script[data-website-id]')
   if (existingScript) {
     return
@@ -38,24 +38,39 @@ function removeUmamiScript(): void {
   }
 }
 
+const copy = {
+  en: {
+    title: 'Cookie settings',
+    body: 'We use cookies to analyse and improve the usage of our website. Analytics cookies help us understand how visitors interact with it. For more information, see our',
+    privacy: 'Privacy Policy',
+    reject: 'Essential only',
+    accept: 'Accept all',
+  },
+  de: {
+    title: 'Cookie-Einstellungen',
+    body: 'Wir nutzen Cookies, um die Nutzung unserer Website zu analysieren und zu verbessern. Analyse-Cookies helfen uns zu verstehen, wie Besucher mit ihr interagieren. Mehr dazu in unserer',
+    privacy: 'Datenschutzerklärung',
+    reject: 'Nur essenzielle',
+    accept: 'Alle akzeptieren',
+  },
+}
+
 /**
- * GDPR-compliant cookie consent banner component
+ * GDPR-compliant consent banner.
  *
- * Shows on first visit and allows users to accept or reject analytics cookies.
- * Stores consent preference in localStorage and loads/removes Umami Analytics accordingly.
+ * Named "ConsentBanner" (not "CookieBanner") so that ad/tracking blockers do
+ * not block the module file by its name in dev. Behaviour is unchanged.
  */
-export function CookieBanner() {
+export function ConsentBanner() {
+  const { lang } = useLanguage()
+  const t = copy[lang]
   const [consent, setConsent] = useState<boolean | null>(null)
 
   useEffect(() => {
-    // Check if user has already made a choice
-    const storedConsent = localStorage.getItem(COOKIE_CONSENT_KEY)
-
-    if (storedConsent !== null) {
-      const hasConsent = storedConsent === 'true'
+    const stored = localStorage.getItem(CONSENT_KEY)
+    if (stored !== null) {
+      const hasConsent = stored === 'true'
       setConsent(hasConsent)
-
-      // Load Umami if consent was previously given
       if (hasConsent) {
         loadUmamiScript()
       }
@@ -63,18 +78,17 @@ export function CookieBanner() {
   }, [])
 
   const handleAcceptAll = (): void => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'true')
+    localStorage.setItem(CONSENT_KEY, 'true')
     setConsent(true)
     loadUmamiScript()
   }
 
   const handleRejectAll = (): void => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'false')
+    localStorage.setItem(CONSENT_KEY, 'false')
     setConsent(false)
     removeUmamiScript()
   }
 
-  // Don't show banner if user has already made a choice
   if (consent !== null) {
     return null
   }
@@ -83,44 +97,38 @@ export function CookieBanner() {
     <div
       className="fixed bottom-0 left-0 right-0 z-[200] border-t bg-card shadow-lg"
       role="dialog"
-      aria-label="Cookie Settings"
+      aria-label={t.title}
     >
       <div className="container mx-auto max-w-[1200px] px-6 py-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          {/* Information text */}
           <div className="flex-1">
-            <h3 className="mb-2 text-lg font-semibold text-foreground">
-              Cookie Settings
-            </h3>
+            <h3 className="mb-2 text-lg font-semibold text-foreground">{t.title}</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              We use cookies to analyze and improve the usage of our website.
-              Analytics cookies help us understand how visitors interact with our website.
-              For more information, please see our{' '}
+              {t.body}{' '}
               <Link
                 to="/imprint#datenschutz"
                 className="font-medium text-primary underline-offset-4 hover:underline"
               >
-                Privacy Policy
+                {t.privacy}
               </Link>
               .
             </p>
           </div>
 
-          {/* Action buttons */}
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               onClick={handleRejectAll}
               className="rounded-lg border bg-secondary px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               type="button"
             >
-              Essential Only
+              {t.reject}
             </button>
             <button
               onClick={handleAcceptAll}
               className="rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               type="button"
             >
-              Accept All
+              {t.accept}
             </button>
           </div>
         </div>
@@ -128,4 +136,3 @@ export function CookieBanner() {
     </div>
   )
 }
-

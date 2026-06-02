@@ -35,6 +35,9 @@ jobs:
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/rnltlabs:latest
           ${{ secrets.DOCKER_USERNAME }}/rnltlabs:v${{ steps.package-version.outputs.version }}
+        build-args: |
+          GIT_COMMIT=${{ github.sha }}
+          VITE_WEB3FORMS_ACCESS_KEY=${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
         cache-to: type=inline
 
     - name: Backup current production container
@@ -235,7 +238,7 @@ jobs:
                 curl -s -X POST https://api.linear.app/graphql \
                   -H "Content-Type: application/json" \
                   -H "Authorization: ${{ secrets.LINEAR_API_KEY }}" \
-                  -d "{\"query\":\"mutation { issueUpdate(id: \\\"$ISSUE_ID\\\", input: { stateId: \\\"80530df2-d0e3-40bc-9526-eb5c0c310b6d\\\" }) { success } }\"}"
+                  -d "{\"query\":\"mutation { issueUpdate(id: \\\"$ISSUE_ID\\\", input: { stateId: \\\"${{ vars.LINEAR_DONE_STATE_ID }}\\\" }) { success } }\"}"
 
                 echo "✅ $ISSUE_IDENTIFIER updated to Done (Production deployed)"
               fi
