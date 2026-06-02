@@ -10,7 +10,7 @@ import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { Imprint } from './pages/Imprint'
 import { CookieSettings } from './pages/CookieSettings'
-import { CookieBanner } from './components/CookieBanner'
+import { ConsentBanner } from './components/ConsentBanner'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/imprint" element={<Imprint />} />
         <Route path="/cookie-settings" element={<CookieSettings />} />
       </Routes>
-      <CookieBanner />
+      <ConsentBanner />
     </>
   )
 }

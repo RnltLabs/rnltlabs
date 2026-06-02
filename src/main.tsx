@@ -55,6 +55,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import { ErrorBoundary } from './components/ErrorBoundary'
+import { LanguageProvider } from './i18n/LanguageContext'
 
 // Sentry automatically captures uncaught errors and unhandled rejections
 // No need for manual window.addEventListener anymore
@@ -63,7 +64,9 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ErrorBoundary>
       <BrowserRouter>
-        <App />
+        <LanguageProvider>
+          <App />
+        </LanguageProvider>
       </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>,
