@@ -25,7 +25,7 @@ export function Hero() {
       {/* Hero Content */}
       <div className="relative z-[2] flex w-full max-w-[820px] flex-col items-center animate-fadeInUp">
         {/* Main Heading */}
-        <h1 className="mb-8 w-full bg-gradient-to-br from-foreground to-primary bg-clip-text text-center text-[clamp(3rem,6vw,4.5rem)] font-bold leading-[1.1] tracking-tight text-transparent">
+        <h1 className="mb-8 w-full bg-gradient-to-br from-foreground to-primary bg-clip-text pb-2 text-center text-[clamp(3rem,6vw,4.5rem)] font-bold leading-[1.18] tracking-tight text-transparent">
           {h.title[0]}
           <br />
           {h.title[1]}
