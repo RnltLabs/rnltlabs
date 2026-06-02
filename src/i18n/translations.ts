@@ -257,7 +257,7 @@ const de: typeof en = {
     meta: 'Business Informatics (M.Sc.) @ HKA · Agentic AI Research @ SAP · Karlsruhe',
   },
   contact: {
-    title: 'Lass uns reden',
+    title: "Let's talk",
     subtitle: 'Du hast einen Prozess, der dir Zeit frisst? Erzähl mir davon.',
     name: 'Name',
     email: 'E-Mail',
@@ -275,7 +275,7 @@ const de: typeof en = {
     mailSubject: 'Anfrage über rnltlabs.de',
   },
   footer: {
-    tagline: 'Reden kann jeder. Ich baue.',
+    tagline: "I test in production so you don't have to.",
     imprint: 'Impressum',
   },
 }
