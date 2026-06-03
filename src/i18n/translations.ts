@@ -65,7 +65,7 @@ const en = {
     ],
     forWhoLabel: 'Best fit',
     forWho:
-      'small teams and agencies that run a demanding process over and over, for clients who expect a sharp result every time.',
+      'agencies and companies that want to make complex workflows autonomous and repeatable, to save time, enable scale, and reduce operational load.',
     cta: 'Tell me about your process',
   },
   proof: {
@@ -201,7 +201,7 @@ const de: typeof en = {
     ],
     forWhoLabel: 'Passt am besten zu',
     forWho:
-      'kleinen Teams und Agenturen, die einen anspruchsvollen Prozess immer wieder fahren, für Kunden, die jedes Mal ein Top-Ergebnis erwarten.',
+      'Agenturen und Unternehmen, die komplexe Abläufe autonom und wiederholbar machen wollen, um Zeit zu sparen, Skalierung zu ermöglichen und operative Last zu reduzieren.',
     cta: 'Erzähl mir von deinem Prozess',
   },
   proof: {
@@ -223,7 +223,7 @@ const de: typeof en = {
         title: 'Athletly',
         tag: 'Open Source',
         summary:
-          'Eine autonome KI-Coaching-Engine mit eigenem agentischen Loop: über 20 Tools, ein Gedächtnis mit Confidence-Bewertung, und eine Architektur, in der der Code rechnet und das Modell entscheidet. Sie hat meine Halbmarathon-Zeit von 1:39 auf 1:28 gebracht.',
+          'Autonome KI-Coaching-Engine mit agentischem Loop, 20+ Tools und einem Confidence-basierten Gedächtnis. Der Code übernimmt die Berechnungen, das Modell die Entscheidungen. Mit diesem KI-System habe ich meine Halbmarathon-Zeit von 1:39 auf 1:28 verbessert.',
         link: 'https://github.com/RnltLabs/athletly-backend',
         linkLabel: 'GitHub',
       },
