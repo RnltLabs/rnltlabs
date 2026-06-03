@@ -20,6 +20,9 @@ dist-ssr
 # Personal workflow documentation
 WORKFLOW-CHEATSHEET.md
 
+# Local email signatures (not part of the deployed site)
+email-signatures/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
