@@ -3,7 +3,7 @@
  *
  * This software is proprietary and confidential.
  * Unauthorized use, reproduction, or distribution is prohibited.
- * For licensing information, contact: hello@rnltlabs.de
+ * For licensing information, contact: roman@rnltlabs.de
  */
 
 import { Header } from '../components/Header'
@@ -33,7 +33,7 @@ export function Imprint() {
 
             <h3 className="mb-4 text-lg font-semibold text-foreground">Kontakt</h3>
             <p className="text-muted-foreground">
-              <strong className="font-medium text-foreground">E-Mail:</strong> hello@rnltlabs.de
+              <strong className="font-medium text-foreground">E-Mail:</strong> roman@rnltlabs.de
             </p>
 
             <h3 className="mb-4 mt-6 text-lg font-semibold text-foreground">
@@ -162,7 +162,7 @@ export function Imprint() {
               <br />
               76131 Karlsruhe
               <br />
-              E-Mail: hello@rnltlabs.de
+              E-Mail: roman@rnltlabs.de
             </address>
 
             <h3 className="mb-4 text-lg font-semibold text-foreground">
@@ -306,7 +306,7 @@ export function Imprint() {
               <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
             </ul>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Zur Ausübung dieser Rechte genügt eine E-Mail an: hello@rnltlabs.de
+              Zur Ausübung dieser Rechte genügt eine E-Mail an: roman@rnltlabs.de
             </p>
 
             <h3 className="mb-4 text-lg font-semibold text-foreground">

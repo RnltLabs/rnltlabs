@@ -3,14 +3,14 @@
  *
  * This software is proprietary and confidential.
  * Unauthorized use, reproduction, or distribution is prohibited.
- * For licensing information, contact: hello@rnltlabs.de
+ * For licensing information, contact: roman@rnltlabs.de
  */
 
 import { useState } from 'react'
 import { Mail, Linkedin, Github } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const CONTACT_EMAIL = 'hello@rnltlabs.de'
+const CONTACT_EMAIL = 'roman@rnltlabs.de'
 // Web3Forms access key, injected at build time via VITE_WEB3FORMS_ACCESS_KEY.
 // Local: .env. Production: GitHub Actions build-arg from a repo secret.
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined
