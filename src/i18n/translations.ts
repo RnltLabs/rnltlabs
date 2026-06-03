@@ -3,7 +3,7 @@
  *
  * This software is proprietary and confidential.
  * Unauthorized use, reproduction, or distribution is prohibited.
- * For licensing information, contact: hello@rnltlabs.de
+ * For licensing information, contact: roman@rnltlabs.de
  */
 
 export type Lang = 'en' | 'de'
@@ -130,7 +130,7 @@ const en = {
     submit: 'Send message',
     sending: 'Sending...',
     success: "Thanks, your message is on its way. I'll get back to you soon.",
-    error: 'Something went wrong. Please try again or email hello@rnltlabs.de directly.',
+    error: 'Something went wrong. Please try again or email roman@rnltlabs.de directly.',
     note: 'Your details come straight to me, nowhere else.',
     direct: 'Prefer direct?',
     errorName: 'Please enter your name.',
@@ -266,7 +266,7 @@ const de: typeof en = {
     submit: 'Nachricht senden',
     sending: 'Wird gesendet...',
     success: 'Danke, deine Nachricht ist raus. Ich melde mich bald.',
-    error: 'Da ist etwas schiefgelaufen. Versuch es nochmal oder schreib direkt an hello@rnltlabs.de.',
+    error: 'Da ist etwas schiefgelaufen. Versuch es nochmal oder schreib direkt an roman@rnltlabs.de.',
     note: 'Deine Angaben gehen direkt an mich, sonst nirgendwohin.',
     direct: 'Lieber direkt?',
     errorName: 'Bitte gib deinen Namen ein.',
