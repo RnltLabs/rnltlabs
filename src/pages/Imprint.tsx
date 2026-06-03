@@ -20,7 +20,7 @@ export function Imprint() {
           <div className="group relative overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
             <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
-            <h3 className="mb-4 text-lg font-semibold text-foreground">Angaben gemäß § 5 TMG</h3>
+            <h3 className="mb-4 text-lg font-semibold text-foreground">Angaben gemäß § 5 DDG</h3>
             <address className="mb-4 not-italic rounded-lg bg-secondary p-4">
               <strong className="font-medium text-foreground">Roman Reinelt</strong>
               <br />
@@ -35,6 +35,19 @@ export function Imprint() {
             <p className="text-muted-foreground">
               <strong className="font-medium text-foreground">E-Mail:</strong> hello@rnltlabs.de
             </p>
+
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-foreground">
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+            </h3>
+            <p className="text-muted-foreground">Roman Reinelt (Anschrift wie oben)</p>
+
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-foreground">
+              Verbraucherstreitbeilegung
+            </h3>
+            <p className="leading-relaxed text-muted-foreground">
+              Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+              Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
           </div>
         </div>
       </section>
@@ -47,11 +60,11 @@ export function Imprint() {
             <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
+              Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen
               Seiten nach den allgemeinen Gesetzen verantwortlich.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet,
+              Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet,
               übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
               Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
             </p>
@@ -170,16 +183,42 @@ export function Imprint() {
               reibungslosen Verbindungsaufbaus sowie zur Auswertung der Systemsicherheit und
               -stabilität.
             </p>
-
-            <p className="mb-2 font-medium text-foreground">b) Kontaktaufnahme per E-Mail</p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Wenn du mich per E-Mail kontaktierst, werden die von dir übermittelten
-              personenbezogenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) gespeichert, um deine
-              Anfrage zu bearbeiten.
+              Zur Erkennung und Behebung technischer Fehler setze ich ein selbst gehostetes
+              Fehler-Monitoring (auf eigenen Servern in Deutschland) ein. Im Fehlerfall werden
+              technische Daten wie Fehlermeldung, aufgerufene Seite, Browsertyp und eine gekürzte
+              IP-Adresse verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Sicherheit und
+              Stabilität der Website).
+            </p>
+
+            <p className="mb-2 font-medium text-foreground">
+              b) Kontaktaufnahme per E-Mail und über das Kontaktformular
+            </p>
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              Wenn du mich per E-Mail oder über das Kontaktformular kontaktierst, werden die von dir
+              übermittelten personenbezogenen Daten (z. B. Name, E-Mail-Adresse, optional Unternehmen,
+              Nachricht) gespeichert, um deine Anfrage zu bearbeiten.
             </p>
             <p className="mb-4 leading-relaxed text-muted-foreground">
               Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines
-              Vertrags oder vorvertraglicher Maßnahmen).
+              Vertrags oder vorvertraglicher Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+              Interesse an der Beantwortung deiner Anfrage).
+            </p>
+            <p className="mb-4 leading-relaxed text-muted-foreground">
+              Für den Versand der über das Kontaktformular eingegebenen Nachrichten nutze ich den
+              Dienst Web3Forms (web3forms.com). Die im Formular eingegebenen Daten werden an die Server
+              von Web3Forms übermittelt, dort verarbeitet und als E-Mail an mich weitergeleitet. Dabei
+              kann eine Übermittlung in ein Drittland (u. a. USA) nicht ausgeschlossen werden. Weitere
+              Informationen findest du in der Datenschutzerklärung von Web3Forms unter{' '}
+              <a
+                href="https://web3forms.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
+                https://web3forms.com/privacy
+              </a>
+              . Zum Schutz vor Spam wird im Formular ein verstecktes Feld (Honeypot) eingesetzt.
             </p>
 
             <p className="mb-2 font-medium text-foreground">c) Cookies und Web-Analyse (Umami Analytics)</p>
@@ -274,7 +313,7 @@ export function Imprint() {
               7. Aktualität und Änderung dieser Datenschutzerklärung
             </h3>
             <p className="mb-4 leading-relaxed text-muted-foreground">
-              Diese Datenschutzerklärung ist aktuell gültig und hat den Stand: August 2025.
+              Diese Datenschutzerklärung ist aktuell gültig und hat den Stand: Juni 2026.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               Ich behalte mir vor, diese Datenschutzerklärung bei Änderungen an meiner Website oder
