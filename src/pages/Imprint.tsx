@@ -7,16 +7,18 @@
  */
 
 import { Header } from '../components/Header'
+import { Seo } from '../seo/Seo'
 
 export function Imprint() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <Seo page="imprint" />
       <Header />
 
       {/* Impressum Section */}
       <section id="impressum" className="bg-background py-12 pt-20">
         <div className="container mx-auto max-w-[1200px] px-8">
-          <h2 className="mb-6 text-[2rem] font-semibold text-foreground">Impressum</h2>
+          <h1 className="mb-6 text-[2rem] font-semibold text-foreground">Impressum</h1>
           <div className="group relative overflow-hidden rounded-2xl border bg-card p-10 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
             <div className="pointer-events-none absolute right-0 top-0 h-[100px] w-[100px] translate-x-[30px] translate-y-[-30px] rounded-full bg-gradient-to-br from-transparent to-primary/5" />
 

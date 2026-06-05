@@ -5,9 +5,17 @@
   <!-- Homepage -->
   <url>
     <loc>https://rnltlabs.de/</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Imprint -->
+  <url>
+    <loc>https://rnltlabs.de/imprint</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
 </urlset>

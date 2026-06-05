@@ -142,6 +142,24 @@ const en = {
     tagline: "I test in production so you don't have to.",
     imprint: 'Imprint',
   },
+  seo: {
+    home: {
+      title: 'Agentic AI Systems for Your Business | RNLT Labs',
+      description:
+        'Roman Reinelt builds agentic AI systems and custom AI agents that plug into your core workflows. See the work and start your project. RNLT Labs, Karlsruhe.',
+      robots: 'index, follow',
+    },
+    imprint: {
+      title: 'Imprint | RNLT Labs',
+      description: 'Legal notice (Impressum) for RNLT Labs, Roman Reinelt, Karlsruhe, Germany.',
+      robots: 'index, follow',
+    },
+    cookie: {
+      title: 'Cookie Settings | RNLT Labs',
+      description: 'Manage your cookie and analytics preferences for rnltlabs.de.',
+      robots: 'noindex, follow',
+    },
+  },
 }
 
 const de: typeof en = {
@@ -277,6 +295,24 @@ const de: typeof en = {
   footer: {
     tagline: "I test in production so you don't have to.",
     imprint: 'Impressum',
+  },
+  seo: {
+    home: {
+      title: 'Agentic-AI-Systeme für dein Business | RNLT Labs',
+      description:
+        'Roman Reinelt baut agentic AI: eigene Produkte und custom KI-Agenten, integriert in deine Kern-Workflows. Projekt jetzt besprechen. RNLT Labs, Karlsruhe.',
+      robots: 'index, follow',
+    },
+    imprint: {
+      title: 'Impressum | RNLT Labs',
+      description: 'Impressum und rechtliche Angaben für RNLT Labs, Roman Reinelt, Karlsruhe.',
+      robots: 'index, follow',
+    },
+    cookie: {
+      title: 'Cookie-Einstellungen | RNLT Labs',
+      description: 'Verwalte deine Cookie- und Analytics-Einstellungen für rnltlabs.de.',
+      robots: 'noindex, follow',
+    },
   },
 }
 
