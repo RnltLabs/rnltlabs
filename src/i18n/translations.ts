@@ -87,9 +87,11 @@ const en = {
         title: 'Athletly',
         tag: 'Open source',
         summary:
-          'An autonomous AI coaching engine with its own agentic loop: 20+ tools, a memory with confidence scoring, and an architecture where the code computes and the model decides. It took my half-marathon from 1:39 to 1:28.',
-        link: 'https://github.com/RnltLabs/athletly-backend',
+          'An AI training coach built as an agentic multi-agent system: an agent is simply a Skill + a model. Capabilities are declared as modular Skills, each represented as a full SKILL.md folder (following the Agent Skills standard). A generator agent spawns an evaluator and iteratively refines outputs until an LLM-as-judge evaluation harness approves the result. With this coach, I cut my half-marathon from 1:39 to 1:28.',
+        link: 'https://github.com/RomanRnlt/Athletly',
         linkLabel: 'GitHub',
+        demo: 'https://athletly-web.vercel.app/plan',
+        demoLabel: 'Live demo',
       },
       {
         title: 'Runicorn',
@@ -241,9 +243,11 @@ const de: typeof en = {
         title: 'Athletly',
         tag: 'Open Source',
         summary:
-          'Autonome KI-Coaching-Engine mit agentischem Loop, 20+ Tools und einem Confidence-basierten Gedächtnis. Der Code übernimmt die Berechnungen, das Modell die Entscheidungen. Mit diesem KI-System habe ich meine Halbmarathon-Zeit von 1:39 auf 1:28 verbessert.',
-        link: 'https://github.com/RnltLabs/athletly-backend',
+          'Ein KI-Trainingscoach als agentic Multi-Agenten-System: Ein Agent ist einfach ein Skill + ein Modell. Fähigkeiten werden als modulare Skills deklariert, jeder als vollständiger SKILL.md-Ordner (nach dem Agent-Skills-Standard). Ein Generator-Agent spawnt einen Evaluator und verfeinert die Ergebnisse iterativ, bis eine Evaluation-Harness mit LLM-as-Judge das Resultat freigibt. Mit diesem Coach habe ich meine Halbmarathon-Zeit von 1:39 auf 1:28 gesenkt.',
+        link: 'https://github.com/RomanRnlt/Athletly',
         linkLabel: 'GitHub',
+        demo: 'https://athletly-web.vercel.app/plan',
+        demoLabel: 'Live-Demo',
       },
       {
         title: 'Runicorn',
