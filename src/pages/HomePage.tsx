@@ -13,12 +13,14 @@ import { Proof } from '../components/Proof'
 import { Founder } from '../components/Founder'
 import { ContactForm } from '../components/ContactForm'
 import { useLanguage } from '../i18n/LanguageContext'
+import { Seo } from '../seo/Seo'
 
 export function HomePage() {
   const { t } = useLanguage()
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <Seo page="home" />
       <Header />
       <div className="pt-[60px]">
         <Hero />
