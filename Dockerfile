@@ -3,6 +3,12 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
+# Chromium for build-time pre-rendering (driven by puppeteer-core; no bundled
+# download). puppeteer-core's own browser download is skipped via env below.
+RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont
+ENV PUPPETEER_SKIP_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
 # Copy package files
 COPY package*.json ./
 
