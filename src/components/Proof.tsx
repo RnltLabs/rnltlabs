@@ -28,7 +28,10 @@ export function Proof() {
         </h2>
 
         <div className="space-y-6">
-          {p.projects.map((project, i) => (
+          {p.projects.map((project, i) => {
+            // Some projects expose a second link (e.g. a live demo) in addition to `link`.
+            const extra = project as { demo?: string; demoLabel?: string }
+            return (
             <div
               key={project.title}
               className="group relative overflow-hidden rounded-2xl border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -55,12 +58,24 @@ export function Proof() {
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 )}
+                {extra.demo && (
+                  <a
+                    href={extra.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-primary transition-colors hover:text-accent"
+                  >
+                    {extra.demoLabel}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
               <p className="relative z-10 max-w-[860px] text-[1.02rem] leading-relaxed text-muted-foreground">
                 {project.summary}
               </p>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
