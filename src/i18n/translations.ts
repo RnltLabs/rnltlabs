@@ -144,9 +144,9 @@ const en = {
   },
   seo: {
     home: {
-      title: 'Agentic AI Systems for Your Business | RNLT Labs',
+      title: 'Agentic AI Systems for Business Workflows | RNLT Labs',
       description:
-        'Roman Reinelt builds agentic AI systems and custom AI agents that plug into your core workflows. See the work and start your project. RNLT Labs, Karlsruhe.',
+        'Custom-built agentic AI systems and AI agents that automate workflows, integrate with your tools, and deliver measurable business results. Built in Germany.',
       robots: 'index, follow',
     },
     imprint: {
@@ -298,9 +298,9 @@ const de: typeof en = {
   },
   seo: {
     home: {
-      title: 'Agentic-AI-Systeme für dein Business | RNLT Labs',
+      title: 'Agentic-AI-Systeme für Business-Workflows | RNLT Labs',
       description:
-        'Roman Reinelt baut agentic AI: eigene Produkte und custom KI-Agenten, integriert in deine Kern-Workflows. Projekt jetzt besprechen. RNLT Labs, Karlsruhe.',
+        'Maßgeschneiderte agentic AI-Systeme und KI-Agenten, die Workflows automatisieren, sich in deine Tools integrieren und messbare Ergebnisse liefern. Built in Germany.',
       robots: 'index, follow',
     },
     imprint: {
