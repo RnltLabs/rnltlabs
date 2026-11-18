@@ -24,7 +24,9 @@ export function Imprint() {
 
             <h3 className="mb-4 text-lg font-semibold text-foreground">Angaben gemäß § 5 DDG</h3>
             <address className="mb-4 not-italic rounded-lg bg-secondary p-4">
-              <strong className="font-medium text-foreground">Roman Reinelt</strong>
+              <strong className="font-medium text-foreground">RNLT Labs</strong>
+              <br />
+              Inhaber: Roman Reinelt
               <br />
               Lachnerstr. 12
               <br />
@@ -36,6 +38,13 @@ export function Imprint() {
             <h3 className="mb-4 text-lg font-semibold text-foreground">Kontakt</h3>
             <p className="text-muted-foreground">
               <strong className="font-medium text-foreground">E-Mail:</strong> roman@rnltlabs.de
+              <br />
+              <strong className="font-medium text-foreground">Telefon:</strong> +49 721 47006166
+            </p>
+
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-foreground">Umsatzsteuer</h3>
+            <p className="text-muted-foreground">
+              Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE460183231
             </p>
 
             <h3 className="mb-4 mt-6 text-lg font-semibold text-foreground">
